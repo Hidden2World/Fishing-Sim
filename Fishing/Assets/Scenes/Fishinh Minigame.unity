@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 136416661}
   - component: {fileID: 136416666}
   - component: {fileID: 136416667}
+  - component: {fileID: 136416668}
   m_Layer: 0
   m_Name: FishHook
   m_TagString: Untagged
@@ -274,7 +275,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 8
   m_CollisionDetection: 0
 --- !u!135 &136416662
 SphereCollider:
@@ -347,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136416660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.38, y: -2.16, z: 0}
+  m_LocalPosition: {x: 0, y: 0.35, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -370,6 +371,7 @@ MonoBehaviour:
   rb: {fileID: 136416661}
   waterGravity: 5
   aboveGravity: 0
+  maxWaterGraivity: 0
 --- !u!145 &136416667
 SpringJoint:
   m_ObjectHideFlags: 0
@@ -394,6 +396,21 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &136416668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136416660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c444c27f98cfc49a011b60ba005665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jointIncrease: 1
+  jointDecrease: 1
+  joint: {fileID: 136416667}
 --- !u!1 &191085628
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +520,7 @@ GameObject:
   - component: {fileID: 369398311}
   - component: {fileID: 369398310}
   - component: {fileID: 369398313}
+  - component: {fileID: 369398314}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -609,6 +627,20 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &369398314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369398309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74f66e489bcbbe84a9fdc46d38e4c74f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPos: {x: 0, y: 0, z: -10}
+  myPlay: {fileID: 136416665}
 --- !u!1 &628940827
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,7 +845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716150747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.14, y: 3.04, z: 0.58}
+  m_LocalPosition: {x: 0, y: 3.04, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -929,7 +961,7 @@ GameObject:
   - component: {fileID: 1862331409}
   m_Layer: 0
   m_Name: 'Water Collider '
-  m_TagString: Untagged
+  m_TagString: water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
