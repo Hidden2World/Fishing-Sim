@@ -37,7 +37,7 @@ public class HookMovement : MonoBehaviour
     {
         if (collision.gameObject == watercollider)
         {
-            Debug.Log("in water");
+            //Debug.Log("in water");
             inWater = true;
             
         }
