@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
+    //naomi
 {
     [SerializeField] Slider volumeSlider;
 

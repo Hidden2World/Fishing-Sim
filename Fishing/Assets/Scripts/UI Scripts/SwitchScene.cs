@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour
+    //naomi
 {
     [SerializeField] string newGameScene;
 void Update()
