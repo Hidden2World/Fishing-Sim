@@ -23,6 +23,8 @@ public class Add : MonoBehaviour
 
 
     public Transform buttonPanel;
+    public Transform panel1;
+    public Transform panel2;
 
     void Start()
     {
@@ -70,7 +72,6 @@ public class Add : MonoBehaviour
         if (totalWeight <= maxWeight)
         {
             limitReached.gameObject.SetActive(false);
-
             fishAmount++;
             fish1.text = $"{fishAmount}x";
             Weight.text = $"Total Weight: {totalWeight}";
@@ -87,6 +88,18 @@ public class Add : MonoBehaviour
     public void maxWeightReached()
     {
         limitReached.gameObject.SetActive(true);
+    }
+
+    public void Next()
+    {
+        panel1.gameObject.SetActive(false);
+        panel2.gameObject.SetActive(true);
+    }
+
+    public void Back()
+    {
+        panel1.gameObject.SetActive(true);
+        panel2.gameObject.SetActive(false);
     }
 
     
