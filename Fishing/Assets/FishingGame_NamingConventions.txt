@@ -1,0 +1,33 @@
+~Naming Convention for Asset Names~
+
+---
+
+General:
+
+-Upper camel case
+-Underscores between sections
+-General name before specific (so ButtonRed instead of RedButton)
+
+---
+
+Sections and Order:
+
+NameOrUseOfAsset_SceneTheAssetIsUsedIn_ModifierOrStatus
+
+---
+
+Examples:
+
+BackgroundTundra_EndCard_Temp
+ButtonStart_TitleScreen_Final
+
+---
+
+Explaination:
+
+-General terms first so that all like-objects are sorted together (so all buttons are together and easy to find)
+-Addition of the used scene in order to make searching for the asset you are looking for while working in a specific sceen easier (will become more important once we start getting a bunch of scenes)
+-Modifier/Status like 'Temp' for temporary for easy search when replacing assets and updating assignments (could be a tag but I am the type who will forget to add tags and just name an object and zoom off to work so I wet for it in the name instead. Can be changed upon request)
+
+
+
