@@ -33,7 +33,6 @@ public class FIshingHookMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            Debug.Log("a");
             left = true;
         }
         else
@@ -43,7 +42,6 @@ public class FIshingHookMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             right = true;
-            Debug.Log("d");
 
         }
         else
@@ -59,7 +57,6 @@ public class FIshingHookMovement : MonoBehaviour
         // Debug.Log("inwater");
         if (Input.GetMouseButton(0) && inWater)
         {
-            Debug.Log("mouse button going up");
             down = false;
             up = true;
         }
@@ -89,13 +86,11 @@ public class FIshingHookMovement : MonoBehaviour
             // rb.AddForce(-leftMove, 0, 0);
             //Vector3 transform = new Vector3(0, 0, 0,);
             transform.position += new Vector3(-leftMove, 0, 0);
-            Debug.Log("lefdt");
         }
         if (right)
         {
             //rb.AddForce(rightMove, 0, 0);
             transform.position += new Vector3(rightMove, 0, 0);
-            Debug.Log("right");
             
         }
 
@@ -104,13 +99,13 @@ public class FIshingHookMovement : MonoBehaviour
         {
             joint.maxDistance = joint.maxDistance + jointIncrease * Time.deltaTime;
             //rb.AddForce(0, -1, 0);
-            Debug.Log("goingdown");
+            
             
         }
         if (up)
         {
             joint.maxDistance = joint.maxDistance - jointDecrease * Time.deltaTime;
-            Debug.Log("going up");
+           
         }
     }
     private void OnTriggerEnter(Collider collision)
