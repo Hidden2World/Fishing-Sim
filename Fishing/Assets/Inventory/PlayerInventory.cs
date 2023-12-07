@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -15,12 +16,24 @@ public class PlayerInventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    static private PlayerInventory playerinventory = null;
+
+    private void Awake() // called when the object is created (before start)
     {
-        
+        if (playerinventory == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            playerinventory = this; //this means THIS script
+
+        }
+        else
+        {
+            Destroy(this);
+        }
+
     }
+
 }

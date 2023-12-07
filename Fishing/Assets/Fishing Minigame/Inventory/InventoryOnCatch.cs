@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class hook : MonoBehaviour
+public class InventoryOnCatch : MonoBehaviour
 {
-    public bool isHooked;
     // Start is called before the first frame update
     void Start()
     {

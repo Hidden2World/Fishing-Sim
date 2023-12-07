@@ -9,26 +9,35 @@ public class FIshingHookMovement : MonoBehaviour
 {
     public float jointIncrease;
     public float jointDecrease;
-    public SpringJoint joint;
+    public float leftMove;
+    public float rightMove;
+
     bool down;
     bool up;
     public bool inWater;
-    public GameObject waterCollider;
-    public Rigidbody rb;
-    public float leftMove;
-    public float rightMove;
     bool left;
     bool right;
-    
 
-    // Start is called before the first frame update
+    public GameObject waterCollider;
+
+    public Rigidbody rb;
+    public SpringJoint joint;
+
+    string hookType;
+
+  
+
+
+
+
     void Start()
     {
          SpringJoint joint = GetComponent<SpringJoint>();
-        down = true;
+         down = true;
+         
     }
 
-    // Update is called once per frame
+ 
     void Update()
     {
         if (Input.GetKey(KeyCode.A))
@@ -48,13 +57,6 @@ public class FIshingHookMovement : MonoBehaviour
         {
             right = false;
         }
-        /*if (Input.GetKeyDown("right"))
-        {
-            rb.AddForce(rightMove, 0, 0);
-            Debug.Log("right");
-        }
-        */
-        // Debug.Log("inwater");
         if (Input.GetMouseButton(0) && inWater)
         {
             down = false;
@@ -65,17 +67,6 @@ public class FIshingHookMovement : MonoBehaviour
             down = true;
             up = false;
         }
-        // if (!down && Input.GetMouseButtonUp(0))
-        //{
-
-        //down = true;
-        // }
-
-
-        if (down)
-        {
-            //Debug.Log("down is ture");
-        }
     }
     
 
@@ -83,29 +74,22 @@ public class FIshingHookMovement : MonoBehaviour
         {
         if (left)
         {
-            // rb.AddForce(-leftMove, 0, 0);
-            //Vector3 transform = new Vector3(0, 0, 0,);
+            
             transform.position += new Vector3(-leftMove, 0, 0);
         }
         if (right)
         {
-            //rb.AddForce(rightMove, 0, 0);
-            transform.position += new Vector3(rightMove, 0, 0);
-            
+            transform.position += new Vector3(rightMove, 0, 0);        
         }
 
 
         if (down)
         {
             joint.maxDistance = joint.maxDistance + jointIncrease * Time.deltaTime;
-            //rb.AddForce(0, -1, 0);
-            
-            
         }
         if (up)
         {
             joint.maxDistance = joint.maxDistance - jointDecrease * Time.deltaTime;
-           
         }
     }
     private void OnTriggerEnter(Collider collision)
@@ -114,13 +98,11 @@ public class FIshingHookMovement : MonoBehaviour
         {
             inWater = true; 
         }
+
+        if (collision.gameObject.name == "Sky Box") ;
+            
     }
-    private void OnTriggerExit(Collider collision)
-    {
-        //if (inWater)
-       // {
-        //    inWater = false; 
-        //
-    }
+
+   
 }
 

@@ -10,6 +10,7 @@ public class SharkMovement : MonoBehaviour
     bool hook;
     public Transform hookPos;
     bool hooked;
+    
     // Start is called before the first frame update
     void Start()
     {

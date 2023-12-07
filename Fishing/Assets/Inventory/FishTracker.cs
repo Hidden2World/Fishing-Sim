@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // making a type for each fish
-public enum fishtype { fish1, fish2, fish3 };
+public enum fishtype { clownfish, seabass, shark };
 
 /// <summary>
 /// this class is here to store all the information for the fish used
@@ -20,6 +20,7 @@ public class FishTracker : MonoBehaviour
     // the image for each fish
     public Sprite FishImage;
 
+    public FishTracker fishPrefab;
 
     // Start is called before the first frame update
     void Start()
