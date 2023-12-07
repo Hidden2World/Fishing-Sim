@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BoatController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class BoatController : MonoBehaviour
     [SerializeField]
     private float moveInputValue;
     private float turnInputValue;
+    public LayerMask islandLayer;
+    public string fishingSceneName;
 
     void Start()
     {
@@ -29,7 +32,7 @@ public class BoatController : MonoBehaviour
         }
         if (moveInputValue >= 0)
         {
-            moveSpeed = 12;
+                moveSpeed = 12;
         }
     }
 
@@ -41,8 +44,16 @@ public class BoatController : MonoBehaviour
 
     private void Move()
     {
-        Vector3 movement = transform.forward * moveInputValue * moveSpeed * Time.deltaTime;
-        rb.MovePosition(rb.position + movement);
+        Vector3 direction = transform.forward * moveInputValue;
+        if (Physics.Raycast(transform.position, direction, out RaycastHit hit, 9, islandLayer)) 
+        {
+            return;
+        }
+        else
+        {
+            Vector3 movement = transform.forward * moveInputValue * moveSpeed * Time.deltaTime;
+            rb.MovePosition(rb.position + movement);
+        }
     }
 
     private void Turn()
@@ -50,5 +61,20 @@ public class BoatController : MonoBehaviour
         float turn = turnInputValue * turnSpeed * Time.deltaTime;
         Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
         rb.MoveRotation(rb.rotation * turnRotation);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("hotspot"))
+        {
+            if (Input.GetButtonDown("submit")) 
+            {
+                SceneManager.LoadScene(fishingSceneName);
+            }
+        }
+        else if (other.gameObject.CompareTag("dock"))
+        {
+            
+        }
     }
 }
