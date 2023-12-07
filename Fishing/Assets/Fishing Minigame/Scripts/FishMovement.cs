@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FishMovement : MonoBehaviour
 {
@@ -24,7 +25,12 @@ public class FishMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKey(KeyCode.R) && hooked)
+        {
+            hook = false;
+            hooked = false;
+            transform.position =  new Vector3(transform.position.x, transform.position.y - 10, transform.position.z);
+        }
     }
 
     private void FixedUpdate()
@@ -38,9 +44,11 @@ public class FishMovement : MonoBehaviour
             transform.position = hookPos.position;
             hooked = true;
 
-        }
 
-    }
+        }
+    } 
+
+       
 
     private void OnTriggerEnter(Collider other)
     {
@@ -49,14 +57,6 @@ public class FishMovement : MonoBehaviour
         {
             speed = speed * -1;
             Debug.Log("swtich directions");
-        }
-        if (other.gameObject.tag == "hook" && !other.gameObject.GetComponent<hook>().isHooked)
-        {
-            Debug.Log("HOOKED");
-
-            hook = true;
-            other.gameObject.GetComponent<hook>().isHooked = true;
-
         }
 
     }

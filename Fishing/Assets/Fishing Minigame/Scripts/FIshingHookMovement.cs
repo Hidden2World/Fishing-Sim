@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class FIshingHookMovement : MonoBehaviour
@@ -67,10 +68,16 @@ public class FIshingHookMovement : MonoBehaviour
             down = true;
             up = false;
         }
-    }
-    
+        if (Input.GetKey(KeyCode.E))
+        {
+            SceneManager.LoadScene("SampleScene");
+            Debug.Log("Load Scene");
+        }
 
-        void FixedUpdate()
+    }
+
+
+    void FixedUpdate()
         {
         if (left)
         {
