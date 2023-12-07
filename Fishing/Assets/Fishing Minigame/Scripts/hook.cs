@@ -34,6 +34,17 @@ public class hook : MonoBehaviour
             rb.isKinematic = true;
 
         }
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            rb.isKinematic = false;
+            fishCaughtDisplay.SetActive(false);
+            Debug.Log("r");
+            isHooked = false;
+            caught = false;
+
+        }
+       
     }
     private void OnTriggerEnter(Collider collision)
     {
@@ -44,7 +55,10 @@ public class hook : MonoBehaviour
                 Debug.Log("Fish Caught");
                 fishCaughtDisplay.SetActive(true);
                 caught = true;
-
+                if (Input.GetKey(KeyCode.R))
+                {
+                    Destroy(collision);
+                }
                 if (caughtFish != null)
                 {
                     inventory.FishBucket.Add(caughtFish);
