@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     // float used to store money
-    public float Money;
+    public float money;
     // storing the fish
     public List<FishTracker> FishBucket = new List<FishTracker>();
 
@@ -35,5 +36,12 @@ public class PlayerInventory : MonoBehaviour
         }
 
     }
-
+    public void SellFish(FishTracker FishToSell)
+    {
+        if (FishBucket.Contains(FishToSell))
+        {
+            FishBucket.Remove(FishToSell);
+            money += FishToSell.price;
+        }
+    }
 }

@@ -48,4 +48,5 @@ MonoBehaviour:
   price: 5
   FishDescription: Uncommon Fish
   type: 1
-  FishImage: {fileID: 21300000, guid: f09eae8c0ea04254b90c5386a034a225, type: 3}
+  FishImage: {fileID: 21300000, guid: ba967215d436450469d8e2d8d3d5d532, type: 3}
+  fishPrefab: {fileID: 0}
