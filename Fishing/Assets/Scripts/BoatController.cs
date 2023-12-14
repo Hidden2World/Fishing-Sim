@@ -64,6 +64,7 @@ public class BoatController : MonoBehaviour
 
         if (Input.GetKeyDown("i") && invOn == false)
         {
+            shopOn = false;
             invOn = true;
             inv.SetActive(true);
             shop.SetActive(false);
@@ -125,6 +126,7 @@ public class BoatController : MonoBehaviour
         {
             if (Input.GetButtonDown("Submit") && shopOn == false)
             {
+                invOn = false;
                 shopOn = true;
                 shop.SetActive(true);
                 inv.SetActive(false);
