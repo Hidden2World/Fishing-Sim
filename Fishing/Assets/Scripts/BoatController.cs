@@ -12,8 +12,11 @@ public class BoatController : MonoBehaviour
     [SerializeField]
     private float moveInputValue;
     private float turnInputValue;
-    public LayerMask islandLayer;
+    public LayerMask collisionLayer;
     public string fishingSceneName;
+    public bool lvlOne;
+    public bool lvlTwo;
+    public bool lvlThree;
 
     void Start()
     {
@@ -23,6 +26,14 @@ public class BoatController : MonoBehaviour
 
     void Update()
     {
+        if (lvlTwo)
+        {
+            collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL2"));
+        }
+        if (lvlThree)
+        {
+            collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL3"));
+        }
         moveInputValue = Input.GetAxis("Vertical");
         turnInputValue = Input.GetAxis("Horizontal");
         if (moveInputValue <= 0)
@@ -45,7 +56,7 @@ public class BoatController : MonoBehaviour
     private void Move()
     {
         Vector3 direction = transform.forward * moveInputValue;
-        if (Physics.Raycast(transform.position, direction, out RaycastHit hit, 9, islandLayer)) 
+        if (Physics.Raycast(transform.position, direction, out RaycastHit hit, 9, collisionLayer)) 
         {
             return;
         }
@@ -67,7 +78,7 @@ public class BoatController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("hotspot"))
         {
-            if (Input.GetButtonDown("submit")) 
+            if (Input.GetButtonDown("Submit")) 
             {
                 SceneManager.LoadScene(fishingSceneName);
             }
