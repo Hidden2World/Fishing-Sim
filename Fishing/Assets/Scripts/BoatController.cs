@@ -6,7 +6,11 @@ using UnityEngine.SceneManagement;
 public class BoatController : MonoBehaviour
 {
 
+    public static BoatController instance;
+
+    //The rigidbody variable
     public Rigidbody rb;
+
     public float moveSpeed = 12;
     public float turnSpeed;
     [SerializeField]
@@ -14,9 +18,19 @@ public class BoatController : MonoBehaviour
     private float turnInputValue;
     public LayerMask collisionLayer;
     public string fishingSceneName;
-    public bool lvlOne;
     public bool lvlTwo;
     public bool lvlThree;
+
+    public GameObject shop;
+    public GameObject inv;
+    public GameObject money;
+    public bool invOn;
+    public bool shopOn;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -26,10 +40,12 @@ public class BoatController : MonoBehaviour
 
     void Update()
     {
+        //When you reach level two the bool is activated which triggers this script to remove a layer from the collision layermask
         if (lvlTwo)
         {
             collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL2"));
         }
+        //When you reach level three the bool is activated which triggers this script to remove a layer from the collision layermask
         if (lvlThree)
         {
             collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL3"));
@@ -44,6 +60,28 @@ public class BoatController : MonoBehaviour
         if (moveInputValue >= 0)
         {
                 moveSpeed = 12;
+        }
+
+        if (Input.GetKeyDown("i") && invOn == false)
+        {
+            invOn = true;
+            inv.SetActive(true);
+            shop.SetActive(false);
+            money.SetActive(true);
+        }
+        else if (Input.GetKeyDown("i") && invOn)
+        {
+            invOn = false;
+            inv.SetActive(false);
+            money.SetActive(false);
+            shop.SetActive(false);
+        }
+
+        if (shopOn && Input.GetKeyDown("escape"))
+        {
+            shopOn = false;
+            shop.SetActive(false);
+            money.SetActive(false);
         }
     }
 
@@ -85,7 +123,13 @@ public class BoatController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("dock"))
         {
-            
+            if (Input.GetButtonDown("Submit") && shopOn == false)
+            {
+                shopOn = true;
+                shop.SetActive(true);
+                inv.SetActive(false);
+                money.SetActive(true);
+            }
         }
     }
 }
