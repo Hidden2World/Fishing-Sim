@@ -8,6 +8,8 @@ TagManager:
   - WallColider
   - wall
   - hook
+  - hotspot
+  - dock
   layers:
   - Default
   - TransparentFX
@@ -38,9 +40,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - Island
+  - LVL2
+  - LVL3
+  - LVL1
   m_SortingLayers:
   - name: Default
     uniqueID: 0
