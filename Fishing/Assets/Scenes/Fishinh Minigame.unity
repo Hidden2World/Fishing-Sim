@@ -2388,83 +2388,22 @@ PrefabInstance:
     - target: {fileID: 1402237785125062693, guid: 3a792623643da504b886fa6ccbaf0822,
         type: 3}
       propertyPath: m_AnchorMax.y
-<<<<<<< Updated upstream
       value: 1
-=======
-      value: 0
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1402237785125062693, guid: 3a792623643da504b886fa6ccbaf0822,
         type: 3}
       propertyPath: m_AnchorMin.y
-<<<<<<< Updated upstream
       value: 1
-=======
-      value: 0
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1402237785125062693, guid: 3a792623643da504b886fa6ccbaf0822,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-<<<<<<< Updated upstream
       value: 120
-=======
-      value: 0
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1402237785125062693, guid: 3a792623643da504b886fa6ccbaf0822,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-<<<<<<< Updated upstream
       value: -23.5
-=======
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402237785156457048, guid: 3a792623643da504b886fa6ccbaf0822,
-        type: 3}
-      propertyPath: FishBucket.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402237785156457048, guid: 3a792623643da504b886fa6ccbaf0822,
-        type: 3}
-      propertyPath: FishBucket.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402237785156457048, guid: 3a792623643da504b886fa6ccbaf0822,
-        type: 3}
-      propertyPath: FishBucket.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402237785156457048, guid: 3a792623643da504b886fa6ccbaf0822,
-        type: 3}
-      propertyPath: FishBucket.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402237785156457048, guid: 3a792623643da504b886fa6ccbaf0822,
-        type: 3}
-      propertyPath: FishBucket.Array.data[4]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402237785156457048, guid: 3a792623643da504b886fa6ccbaf0822,
-        type: 3}
-      propertyPath: FishBucket.Array.data[5]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402237785156457048, guid: 3a792623643da504b886fa6ccbaf0822,
-        type: 3}
-      propertyPath: FishBucket.Array.data[6]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402237785156457048, guid: 3a792623643da504b886fa6ccbaf0822,
-        type: 3}
-      propertyPath: FishBucket.Array.data[7]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402237785156457048, guid: 3a792623643da504b886fa6ccbaf0822,
-        type: 3}
-      propertyPath: FishBucket.Array.data[8]
-      value: 
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2429038842784057431, guid: 3a792623643da504b886fa6ccbaf0822,
         type: 3}
