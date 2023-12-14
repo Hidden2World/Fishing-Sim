@@ -564,8 +564,20 @@ PrefabInstance:
     - target: {fileID: 3656942839212288634, guid: 6f0ea2976b535d343833a8f0d3040891,
         type: 3}
       propertyPath: FishBucket.Array.size
-      value: 11
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3656942839212288634, guid: 6f0ea2976b535d343833a8f0d3040891,
+        type: 3}
+      propertyPath: FishBucket.Array.data[1]
+      value: 
+      objectReference: {fileID: 5852427988746553261, guid: 8584cfd83095e1c408a290a47d87027f,
+        type: 3}
+    - target: {fileID: 3656942839212288634, guid: 6f0ea2976b535d343833a8f0d3040891,
+        type: 3}
+      propertyPath: FishBucket.Array.data[2]
+      value: 
+      objectReference: {fileID: 5852427988746553261, guid: f60427ae0d9a0bc448b379ce484e5c13,
+        type: 3}
     - target: {fileID: 3656942839212288634, guid: 6f0ea2976b535d343833a8f0d3040891,
         type: 3}
       propertyPath: FishBucket.Array.data[4]
