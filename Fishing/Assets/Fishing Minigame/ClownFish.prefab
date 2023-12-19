@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 783284974}
   - component: {fileID: 783284973}
   - component: {fileID: 783284976}
-  - component: {fileID: 1205637381309517827}
   m_Layer: 0
   m_Name: ClownFish
   m_TagString: Untagged
@@ -79,7 +78,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -0.1
+  hook: 0
   hookPos: {fileID: 0}
+  randomPercent: 0
+  outOfPercent: 10
+  timer: 0
+  interval: 1
+  outOfPercentClownFish: 4
 --- !u!114 &783284976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,20 +103,6 @@ MonoBehaviour:
   type: 0
   FishImage: {fileID: 21300000, guid: 0c3cce173345f7648b6056d003ac3c19, type: 3}
   fishPrefab: {fileID: 783284976}
---- !u!114 &1205637381309517827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989738041347987195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef8ac33215a2c94ca2bca466c7abc46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: -0.1
-  hookPos: {fileID: 0}
 --- !u!1 &5700885095117921500
 GameObject:
   m_ObjectHideFlags: 0

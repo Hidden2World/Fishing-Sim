@@ -11,7 +11,10 @@ public class FishMovement : MonoBehaviour
     public bool hook;
     public Transform hookPos;
     bool hooked;
-
+    public int randomPercent;
+    public int outOfPercent = 4; //what the chance is, if outOfPercent == 5, it is a 1 in 5 chance.
+    public float timer = 0f;
+    public float interval = 1f; //set the interval in seconds
 
     FishTracker fishTracker;
     // Start is called before the first frame update
@@ -19,18 +22,38 @@ public class FishMovement : MonoBehaviour
     {
         forward = true;
         backward = false;
-        hookPos = GameObject.FindWithTag("hook").transform;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //hookPos = GameObject.FindWithTag("hook").transform;
         if (Input.GetKey(KeyCode.R) && hooked)
         {
             hook = false;
             hooked = false;
             transform.position =  new Vector3(transform.position.x, transform.position.y - 10, transform.position.z);
+            Debug.Log("release");
+
         }
+        // Increment the timer by the time since the last frame
+
+        
+
+        // Check if the interval has passed
+        if (timer >= interval)
+        {
+            // Execute  code 
+            randomPercent = Random.Range(0, outOfPercent);
+            Debug.Log(randomPercent);
+
+            // Reset the timer
+            timer = 0f;
+            
+        }
+      
+
     }
 
     private void FixedUpdate()
@@ -46,14 +69,16 @@ public class FishMovement : MonoBehaviour
 
 
         }
-    } 
+       
+    }
+
 
        
 
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.tag == "wall")
+        if (other.gameObject.tag == "wall" )
         {
             speed = speed * -1;
             Debug.Log("swtich directions");

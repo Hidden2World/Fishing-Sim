@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class hook : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class hook : MonoBehaviour
     PlayerInventory inventory;
     FIshingHookMovement hookMovementScript;
     FishTracker caughtFish;
+
+    GameObject hookedFish;
     
 
     private void Start()
@@ -34,20 +37,26 @@ public class hook : MonoBehaviour
             rb.isKinematic = true;
 
         }
-
-        if (Input.GetKey(KeyCode.R))
+        if (caught)
         {
-            rb.isKinematic = false;
-            fishCaughtDisplay.SetActive(false);
-            Debug.Log("r");
-            isHooked = false;
-            caught = false;
+            if (Input.GetKey(KeyCode.R))
+            {
+                Destroy(hookedFish);
+                rb.isKinematic = false;
+                fishCaughtDisplay.SetActive(false);
+                Debug.Log("r");
+                isHooked = false;
 
+                caught = false;
+            }
         }
-       
+
+
+
     }
     private void OnTriggerEnter(Collider collision)
     {
+        
         if (collision.gameObject.name == "Sky Box")
         {
             if (isHooked)
@@ -55,27 +64,40 @@ public class hook : MonoBehaviour
                 Debug.Log("Fish Caught");
                 fishCaughtDisplay.SetActive(true);
                 caught = true;
-                if (Input.GetKey(KeyCode.R))
-                {
-                    Destroy(collision);
-                }
+               
                 if (caughtFish != null)
                 {
                     inventory.FishBucket.Add(caughtFish);
                 }
+             
+             
             }
         }
         caughtFish = collision.GetComponent<FishTracker>();
         if (caughtFish != null && !isHooked)
         {
+            hookedFish = collision.gameObject;
             Debug.Log("HOOKED");
+            if (collision.gameObject.name == "ClownFish(Clone)")
+            
+                caughtFish.GetComponent<ClownFishMovement>().hook = true;
+                isHooked = true;
 
-            caughtFish.GetComponent<FishMovement>().hook = true;
-           
-            isHooked = true;
+            }
+             if (collision.gameObject.name == "SeaBass(Clone)")
+            {
+                caughtFish.GetComponent<BassMovement>().hook = true;
+                isHooked = true;
+
+            }
+             if (collision.gameObject.name == "Shark()")
+            {
+                caughtFish.GetComponent<SharkMovement>().hook = true;
+                isHooked = true;
+
+            }
 
         }
 
     }
     
-}
