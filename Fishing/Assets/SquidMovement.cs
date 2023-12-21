@@ -60,6 +60,10 @@ public class SquidMovement : MonoBehaviour
         {
             MoveFish();
         }
+        if (hooked)
+        {
+            transform.position = hookPos.position;
+        }
         if (moveTimer <= 1f)
         {
             move = true;
