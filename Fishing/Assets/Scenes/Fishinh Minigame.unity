@@ -1380,6 +1380,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dab899ee149bac4e9d1c763c099a4e3, type: 3}
+--- !u!1 &806531695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 244044666145271119, guid: 676407638d262014c87a6ab9872839dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 68614442}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &872635668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,7 +1833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1234542853
 Transform:
   m_ObjectHideFlags: 0
@@ -1858,8 +1864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fish:
-  - {fileID: 1485702622}
-  - {fileID: 1485702622}
+  - {fileID: 806531695}
+  - {fileID: 806531695}
   xValue: -9.53
   zValue: 0.85
   topSpawn11: {fileID: 1620654950}
