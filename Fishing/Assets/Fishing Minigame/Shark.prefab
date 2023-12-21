@@ -161,4 +161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -0.025
-  hookPos: {fileID: 0}
+  hook: 0
+  hookPos: {fileID: 125140425776465374, guid: 4546b686acaf15e41aca99efaaa8518a, type: 3}
+  randomPercent: 0
+  outOfPercent: 4
+  timer: 0
+  interval: 1
+  outOfPercentShark: 4

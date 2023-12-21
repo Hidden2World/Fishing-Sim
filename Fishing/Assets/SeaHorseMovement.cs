@@ -9,7 +9,7 @@ public class SeaHorseMovement : MonoBehaviour
     private Vector2 moveDirection;
     public bool hooked;
 
-    public Transform hookPos;
+     Transform hookPos;
 
     public string topBoundry;
     public string leftBoundry;
@@ -26,12 +26,17 @@ public class SeaHorseMovement : MonoBehaviour
     {
         // Initialize the fish's initial movement direction
         SetRandomMoveDirection();
+        hookPos = FindObjectOfType<hook>().transform;
+
     }
 
     private void Update()
     {
 
-
+        if (hookPos == null)
+        {
+            hookPos = FindObjectOfType<hook>().transform;
+        }
 
 
 

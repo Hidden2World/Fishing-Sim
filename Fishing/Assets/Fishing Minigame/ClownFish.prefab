@@ -79,7 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -0.1
   hook: 0
-  hookPos: {fileID: 0}
+  hookPos: {fileID: 125140425776465374, guid: 4546b686acaf15e41aca99efaaa8518a, type: 3}
   randomPercent: 0
   outOfPercent: 10
   timer: 0

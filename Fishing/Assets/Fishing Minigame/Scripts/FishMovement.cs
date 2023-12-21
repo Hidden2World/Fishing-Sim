@@ -9,7 +9,7 @@ public class FishMovement : MonoBehaviour
     bool forward;
     bool backward;
     public bool hook;
-    public Transform hookPos;
+    Transform hookPos;
     bool hooked;
     public int randomPercent;
     public int outOfPercent = 4; //what the chance is, if outOfPercent == 5, it is a 1 in 5 chance.
@@ -22,6 +22,8 @@ public class FishMovement : MonoBehaviour
     {
         forward = true;
         backward = false;
+       
+
         
     }
 
@@ -58,12 +60,18 @@ public class FishMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (hookPos == null)
+        {
+            hookPos = FindObjectOfType<hook>().transform;
+        }
+
         if (!hook)
         {
             transform.position = new Vector3(transform.position.x + speed, transform.position.y, transform.position.z);
         }
         else if (hook)
         {
+
             transform.position = hookPos.position;
             hooked = true;
 

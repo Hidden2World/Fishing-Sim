@@ -11,7 +11,7 @@ public class SquidMovement : MonoBehaviour
     private Vector2 moveDirection;
     public bool hooked;
 
-    public Transform hookPos;
+     Transform hookPos;
 
     public string topBoundry;
     public string leftBoundry;
@@ -30,13 +30,18 @@ public class SquidMovement : MonoBehaviour
     {
         // Initialize the fish's initial movement direction
         SetRandomMoveDirection();
+        
+
     }
 
     private void Update()
     {
 
 
-
+        if (hookPos == null)
+        {
+            hookPos = FindObjectOfType<hook>().transform;
+        }
 
 
         if (Input.GetKey(KeyCode.R) && hooked)
@@ -51,7 +56,7 @@ public class SquidMovement : MonoBehaviour
         moveTimer += Time.deltaTime;
 
         // Move the fish in its current direction
-        if (!hooked )
+        if (!hooked && move)
         {
             MoveFish();
         }
@@ -83,10 +88,14 @@ public class SquidMovement : MonoBehaviour
     private void MoveFish()
     {
         // Move the fish based on the current direction and speed
-        while (move)
-        {
+        
             transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
-        }
+
+            // Calculate the angle in degrees and set the rotation
+            float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+
     }
 
     private void SetRandomMoveDirection()
@@ -95,22 +104,31 @@ public class SquidMovement : MonoBehaviour
         if (skyBoxHit)
         {
             randomAngle = Random.Range(180f, 360f) * Mathf.Deg2Rad;
+            moveTimer = 0f;
+
         }
 
 
         if (rightBoundryHit)
         {
             randomAngle = Random.Range(270f, 90f) * Mathf.Deg2Rad;
+            moveTimer = 0f;
+
+
         }
 
         if (leftBoundryHit)
         {
             randomAngle = Random.Range(270f, 450f) * Mathf.Deg2Rad;
+            moveTimer = 0f;
+
         }
 
         if (!skyBoxHit && !rightBoundryHit && !leftBoundryHit)
         {
             randomAngle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
+           
+
 
         }
 
