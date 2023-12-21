@@ -96,9 +96,9 @@ GameObject:
   - component: {fileID: 1344525219}
   - component: {fileID: 1344525221}
   - component: {fileID: 1344525220}
-  - component: {fileID: 7054088066397655537}
+  - component: {fileID: 5238430521948972652}
   m_Layer: 0
-  m_Name: Shark
+  m_Name: SharkInv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   timer: 0
   interval: 1
   outOfPercentShark: 4
---- !u!114 &7054088066397655537
+--- !u!114 &5238430521948972652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,10 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6705cd312363bf44394b04ac4a977e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0
-  price: 0
-  FishDescription: 
+  weight: 8
+  price: 8
+  FishDescription: shark
   type: 0
-  FishImage: {fileID: 0}
-  fishPrefab: {fileID: 5238430521948972652, guid: 12bf39589ca6786459dd548b6ac6d67b,
-    type: 3}
+  FishImage: {fileID: 21300000, guid: 2b76da2f8d98e28449655516c35f41b4, type: 3}
+  fishPrefab: {fileID: 0}

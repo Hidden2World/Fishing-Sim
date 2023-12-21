@@ -27,6 +27,7 @@ public class InventoryManager : MonoBehaviour
 
     void OnEnable()
     {
+        PlayerInventoryReference = FindObjectOfType<PlayerInventory>();
         // clearing all the children(gameobjects) that are currently being displayed in the inventory
         foreach(Transform child  in InventoryContents.transform)
         {

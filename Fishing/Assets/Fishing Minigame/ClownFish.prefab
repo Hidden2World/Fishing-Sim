@@ -79,7 +79,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -0.1
   hook: 0
-  hookPos: {fileID: 125140425776465374, guid: 4546b686acaf15e41aca99efaaa8518a, type: 3}
   randomPercent: 0
   outOfPercent: 10
   timer: 0
@@ -102,7 +101,7 @@ MonoBehaviour:
   FishDescription: clownfish
   type: 0
   FishImage: {fileID: 21300000, guid: 0c3cce173345f7648b6056d003ac3c19, type: 3}
-  fishPrefab: {fileID: 783284976}
+  fishPrefab: {fileID: 783284976, guid: 1fc9b99405583644cbffc3f9f7bc1553, type: 3}
 --- !u!1 &5700885095117921500
 GameObject:
   m_ObjectHideFlags: 0

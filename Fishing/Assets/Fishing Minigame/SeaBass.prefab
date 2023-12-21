@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 139642055}
   - component: {fileID: 139642057}
   - component: {fileID: 139642056}
+  - component: {fileID: 6073409401476379404}
   m_Layer: 0
   m_Name: SeaBass
   m_TagString: Untagged
@@ -78,12 +79,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -0.05
   hook: 0
-  hookPos: {fileID: 125140425776465374, guid: 4546b686acaf15e41aca99efaaa8518a, type: 3}
   randomPercent: 0
   outOfPercent: 4
   timer: 0
   interval: 1
   outOfPercentBass: 4
+--- !u!114 &6073409401476379404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244044666145271119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6705cd312363bf44394b04ac4a977e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 0
+  price: 0
+  FishDescription: 
+  type: 0
+  FishImage: {fileID: 0}
+  fishPrefab: {fileID: -636143105320694092, guid: 642059a8af1a42145a545708990deb86,
+    type: 3}
 --- !u!1 &4867495362151701653
 GameObject:
   m_ObjectHideFlags: 0

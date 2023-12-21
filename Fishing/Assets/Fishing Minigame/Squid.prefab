@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444959405135122645}
   - component: {fileID: 9187931730242037801}
+  - component: {fileID: 8445929763653609372}
   m_Layer: 0
   m_Name: Squid
   m_TagString: Untagged
@@ -49,7 +50,6 @@ MonoBehaviour:
   switchInterval: 3
   moveTimer: 0
   hooked: 0
-  hookPos: {fileID: 0}
   topBoundry: 
   leftBoundry: 
   rightBoundry: 
@@ -58,6 +58,25 @@ MonoBehaviour:
   leftBoundryHit: 0
   rightBoundryHit: 0
   move: 0
+--- !u!114 &8445929763653609372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6508530683709118954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6705cd312363bf44394b04ac4a977e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 0
+  price: 0
+  FishDescription: 
+  type: 0
+  FishImage: {fileID: 0}
+  fishPrefab: {fileID: 512771445681925259, guid: e1495abd83a1bc647a3cdd63d6a615de,
+    type: 3}
 --- !u!1 &8741564057985395509
 GameObject:
   m_ObjectHideFlags: 0

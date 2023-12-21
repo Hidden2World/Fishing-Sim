@@ -12,13 +12,16 @@ public class CurrentMoneyCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Inventory = FindObjectOfType<PlayerInventory>();
         CurrentMoneyText = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Inventory == null)
+        {
+            Inventory = FindObjectOfType<PlayerInventory>();
+        }
         CurrentMoneyText.text = "$" + Inventory.money;
     }
 }

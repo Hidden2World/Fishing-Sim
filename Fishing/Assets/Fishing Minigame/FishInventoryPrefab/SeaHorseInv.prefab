@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1086667380}
   - component: {fileID: 1086667381}
   m_Layer: 0
-  m_Name: SeaHorse
+  m_Name: SeaHorseInv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,12 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6705cd312363bf44394b04ac4a977e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0
-  price: 0
+  weight: 7
+  price: 7
   FishDescription: 
   type: 3
   FishImage: {fileID: 0}
-  fishPrefab: {fileID: 1086667381, guid: 7db1bbfbe93a67a4cbf68c8054d15eb8, type: 3}
+  fishPrefab: {fileID: 0}
 --- !u!1 &7195714219853560476
 GameObject:
   m_ObjectHideFlags: 0
