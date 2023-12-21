@@ -17,7 +17,6 @@ public class ClownFishMovement : FishMovement
         if (randomPercent == 1)
         {
             speed = speed * -1;
-            Debug.Log("random swtich direction");
             randomPercent = 0;
         }
         timer += Time.deltaTime;
@@ -25,7 +24,6 @@ public class ClownFishMovement : FishMovement
         {
             // Execute  code 
             randomPercent = Random.Range(0, outOfPercent);
-            Debug.Log(randomPercent);
 
             // Reset the timer
             timer = 0f;

@@ -81,7 +81,7 @@ public class FishMovement : MonoBehaviour
         if (other.gameObject.tag == "wall" )
         {
             speed = speed * -1;
-            Debug.Log("swtich directions");
+            
         }
 
     }

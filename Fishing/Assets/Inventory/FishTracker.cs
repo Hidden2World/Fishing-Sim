@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // making a type for each fish
-public enum fishtype { clownfish, seabass, shark };
+public enum fishtype { clownfish, seabass, shark, seahorse };
 
 /// <summary>
 /// this class is here to store all the information for the fish used

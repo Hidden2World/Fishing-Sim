@@ -20,9 +20,10 @@ public class FishSpawning : MonoBehaviour
     {
        
         int spawnAmmount = Random.Range(minFish, maxFish);
-        int randomIndex = Random.Range(0, Fish.Length);
         for (int i = 0; i < spawnAmmount; i++)
         {
+            int randomIndex = Random.Range(0, Fish.Length);
+
             Vector3 randomSpawnPosition = new Vector3(Random.Range(topSpawn11.position.x, xSpawn.position.x), Random.Range(bottomSpawn11.position.y, topSpawn11.position.y), zValue);
             Instantiate(Fish[randomIndex], randomSpawnPosition, Quaternion.identity);
         }

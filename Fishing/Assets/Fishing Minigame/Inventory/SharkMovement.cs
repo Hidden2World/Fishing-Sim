@@ -5,17 +5,16 @@ using UnityEngine;
 
 public class SharkMovement : FishMovement
 {
-    public int outOfPercentClownFish = 4;
+    public int outOfPercentShark = 4;
     private void Start()
     {
-        outOfPercent = outOfPercentClownFish;
+        outOfPercent = outOfPercentShark;
     }
     private void Update()
     {
         if (randomPercent == 1)
         {
             speed = speed * -1;
-            Debug.Log("random swtich direction");
             randomPercent = 0;
         }
         timer += Time.deltaTime;
@@ -23,7 +22,6 @@ public class SharkMovement : FishMovement
         {
             // Execute  code 
             randomPercent = Random.Range(0, outOfPercent);
-            Debug.Log(randomPercent);
 
             // Reset the timer
             timer = 0f;

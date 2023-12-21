@@ -19,7 +19,7 @@ public class hook : MonoBehaviour
     FIshingHookMovement hookMovementScript;
     FishTracker caughtFish;
 
-    GameObject hookedFish;
+    public GameObject hookedFish;
     
 
     private void Start()
@@ -57,6 +57,7 @@ public class hook : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         
+
         if (collision.gameObject.name == "Sky Box")
         {
             if (isHooked)
@@ -64,13 +65,13 @@ public class hook : MonoBehaviour
                 Debug.Log("Fish Caught");
                 fishCaughtDisplay.SetActive(true);
                 caught = true;
-               
+
                 if (caughtFish != null)
                 {
                     inventory.FishBucket.Add(caughtFish);
                 }
-             
-             
+
+
             }
         }
         caughtFish = collision.GetComponent<FishTracker>();
@@ -78,26 +79,50 @@ public class hook : MonoBehaviour
         {
             hookedFish = collision.gameObject;
             Debug.Log("HOOKED");
-            if (collision.gameObject.name == "ClownFish(Clone)")
-            
-                caughtFish.GetComponent<ClownFishMovement>().hook = true;
-                isHooked = true;
 
-            }
-             if (collision.gameObject.name == "SeaBass(Clone)")
-            {
-                caughtFish.GetComponent<BassMovement>().hook = true;
-                isHooked = true;
-
-            }
-             if (collision.gameObject.name == "Shark()")
-            {
-                caughtFish.GetComponent<SharkMovement>().hook = true;
-                isHooked = true;
-
-            }
+            turnHookOff();
 
         }
-
     }
+
+        private void turnHookOff()
+        {
+            if (hookedFish.gameObject.name == "ClownFish(Clone)")
+            {
+                 hookedFish.GetComponent<ClownFishMovement>().hook = true;
+                  isHooked = true;
+            }
+
+            if (hookedFish.gameObject.name == "SeaBass(Clone)")
+            {
+                 hookedFish.GetComponent<BassMovement>().hook = true;
+                isHooked = true;
+
+            }
+
+
+            if (hookedFish.gameObject.name == "Shark(Clone)")
+            {
+                hookedFish.GetComponent<SharkMovement>().hook = true;
+                isHooked = true;
+
+            } 
+
+            if (hookedFish.gameObject.name == "SeaHorse(Clone)")
+
+            {
+                Debug.Log("sea horse touched");
+
+                hookedFish.GetComponent<SeaHorseMovement>().hooked = true;
+                isHooked = true;
+        }
+
+
+
+
+        }
+       
+   
+    }
+
     

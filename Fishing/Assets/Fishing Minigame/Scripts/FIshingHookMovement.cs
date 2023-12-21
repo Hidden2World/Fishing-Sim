@@ -106,7 +106,7 @@ public class FIshingHookMovement : MonoBehaviour
             inWater = true; 
         }
 
-        if (collision.gameObject.name == "Sky Box") ;
+        if (collision.gameObject.name == "Sky Box");
             
     }
 
