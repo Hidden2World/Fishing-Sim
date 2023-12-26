@@ -77,13 +77,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4e0bcd28922d543956d726a08d4fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.1
+  speed: 2.5
   hook: 0
   randomPercent: 0
-  outOfPercent: 10
   timer: 0
   interval: 1
-  outOfPercentClownFish: 4
 --- !u!114 &783284976
 MonoBehaviour:
   m_ObjectHideFlags: 0

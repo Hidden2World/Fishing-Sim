@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 public class FishMovement : MonoBehaviour
 {
     public float speed;
+    public float moveSpeed;
     bool forward;
     bool backward;
     public bool hook;
     Transform hookPos;
     bool hooked;
     public int randomPercent;
-    public int outOfPercent = 4; //what the chance is, if outOfPercent == 5, it is a 1 in 5 chance.
+    protected int outOfPercent = 4; //what the chance is, if outOfPercent == 5, it is a 1 in 5 chance.
     public float timer = 0f;
     public float interval = 1f; //set the interval in seconds
 
@@ -22,6 +23,8 @@ public class FishMovement : MonoBehaviour
     {
         forward = true;
         backward = false;
+        moveSpeed = speed / 5;
+        
        
 
         
@@ -44,7 +47,7 @@ public class FishMovement : MonoBehaviour
         
 
         // Check if the interval has passed
-        if (timer >= interval)
+       /* if (timer >= interval)
         {
             // Execute  code 
             randomPercent = Random.Range(0, outOfPercent);
@@ -54,7 +57,7 @@ public class FishMovement : MonoBehaviour
             timer = 0f;
             
         }
-      
+      */
 
     }
 
@@ -67,7 +70,7 @@ public class FishMovement : MonoBehaviour
 
         if (!hook)
         {
-            transform.position = new Vector3(transform.position.x + speed, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + moveSpeed, transform.position.y, transform.position.z);
         }
         else if (hook)
         {
@@ -88,7 +91,7 @@ public class FishMovement : MonoBehaviour
 
         if (other.gameObject.tag == "wall" )
         {
-            speed = speed * -1;
+            moveSpeed = speed * -1;
             
         }
 

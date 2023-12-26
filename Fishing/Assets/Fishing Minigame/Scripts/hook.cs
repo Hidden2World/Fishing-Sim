@@ -96,7 +96,7 @@ public class hook : MonoBehaviour
 
             if (hookedFish.gameObject.name == "SeaBass(Clone)")
             {
-                 hookedFish.GetComponent<BassMovement>().hook = true;
+                hookedFish.GetComponent<BassMovement>().hooked = true;
                 isHooked = true;
 
             }
@@ -104,7 +104,7 @@ public class hook : MonoBehaviour
 
             if (hookedFish.gameObject.name == "Shark(Clone)")
             {
-                hookedFish.GetComponent<SharkMovement>().hook = true;
+                hookedFish.GetComponent<SharkMovement>().hooked = true;
                 isHooked = true;
 
             } 
