@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Fishinh Minigame.unity
+    path: Assets/Scenes/Fishing Minigame/Minigame Level 1.unity
     guid: 6e4ad23c79ab9a44ba502b183182086d
   m_configObjects: {}
