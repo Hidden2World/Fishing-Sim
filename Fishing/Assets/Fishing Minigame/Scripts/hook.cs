@@ -125,7 +125,13 @@ public class hook : MonoBehaviour
                 hookedFish.GetComponent<SquidMovement>().hooked = true;
                 isHooked = true;
             }
+            if (hookedFish.gameObject.name == "BasicFish2(Clone)")
+            {
+                Debug.Log("Basic Fish Touched");
 
+                hookedFish.GetComponent<BassMovement>().hooked = true;
+                isHooked = true;
+            }
 
 
 
