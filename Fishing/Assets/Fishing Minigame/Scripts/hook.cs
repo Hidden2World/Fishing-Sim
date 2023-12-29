@@ -19,6 +19,7 @@ public class hook : MonoBehaviour
     FIshingHookMovement hookMovementScript;
     FishTracker caughtFish;
 
+    public GameObject skyBox;
     public GameObject hookedFish;
     
 
@@ -58,8 +59,9 @@ public class hook : MonoBehaviour
     {
         
 
-        if (collision.gameObject.name == "Sky Box")
+        if (collision.gameObject == skyBox)
         {
+            Debug.Log("Sky box was indeed hit");
             if (isHooked)
             {
                 Debug.Log("Fish Caught");
