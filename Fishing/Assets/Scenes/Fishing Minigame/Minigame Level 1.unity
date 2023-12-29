@@ -2021,6 +2021,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 125140425776465369, guid: 4546b686acaf15e41aca99efaaa8518a,
         type: 3}
+      propertyPath: skyBox
+      value: 
+      objectReference: {fileID: 6130488004554048704}
+    - target: {fileID: 125140425776465369, guid: 4546b686acaf15e41aca99efaaa8518a,
+        type: 3}
       propertyPath: fishCaughtDisplay
       value: 
       objectReference: {fileID: 1423049138}
@@ -2546,6 +2551,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b4d5bd05ee69ad48a4418c9b886da92, type: 3}
+--- !u!1 &6130488004554048704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6130488004640209027, guid: 8b4d5bd05ee69ad48a4418c9b886da92,
+    type: 3}
+  m_PrefabInstance: {fileID: 6130488004554048703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6994489932882761411
 PrefabInstance:
   m_ObjectHideFlags: 0
