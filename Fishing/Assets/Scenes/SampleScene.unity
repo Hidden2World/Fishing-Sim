@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 508117278}
   - component: {fileID: 508117277}
   m_Layer: 0
-  m_Name: Textprompt1
+  m_Name: Textprompt1-FishingSpot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -799,13 +799,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508117276}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.44, y: -0.26, z: 0}
-  m_LocalScale: {x: 15, y: 0.27, z: 15}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 636539866}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &604934332
 GameObject:
@@ -821,7 +821,7 @@ GameObject:
   - component: {fileID: 604934334}
   - component: {fileID: 604934333}
   m_Layer: 0
-  m_Name: Textprompt2
+  m_Name: Textprompt2-Dock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -911,13 +911,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604934332}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: -0.26, z: 39.4}
-  m_LocalScale: {x: 15, y: 0.27, z: 15}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.2919708, y: -0.3854167, z: 0.08625126}
+  m_LocalScale: {x: 3.6496348, y: 0.07031251, z: 1.2809565}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 1786425253}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &625487432
 GameObject:
@@ -1222,7 +1222,8 @@ Transform:
   m_LocalPosition: {x: 39.44, y: -0.26, z: 0}
   m_LocalScale: {x: 15, y: 0.27, z: 15}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 508117281}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2797,7 +2798,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.22, z: 38.39}
   m_LocalScale: {x: 4.11, y: 3.84, z: 11.71}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 604934337}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
