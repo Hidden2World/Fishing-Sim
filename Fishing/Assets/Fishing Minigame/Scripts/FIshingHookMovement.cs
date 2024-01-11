@@ -103,10 +103,13 @@ public class FIshingHookMovement : MonoBehaviour
     {
         if (collision.gameObject == waterCollider)
         {
-            inWater = true; 
+            inWater = true;
         }
 
-        if (collision.gameObject.name == "Sky Box");
+        if (collision.gameObject.name == "Sky Box")
+        {
+
+        }
             
     }
 
