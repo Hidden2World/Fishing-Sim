@@ -98,8 +98,8 @@ Material:
     - _FoamAmount: 0.4
     - _FoamCutoff: 1
     - _FoamDepth: 1.21
-    - _FoamNoiseScale: 4.34
-    - _FoamRippleSpeed: 0.4
+    - _FoamNoiseScale: -1
+    - _FoamRippleSpeed: 1
     - _FoamScale: 150
     - _FoamSpeed: 0.03
     - _FoandRippleSpeed: 0.3
@@ -120,7 +120,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _WaterHeight: 20
+    - _WaterHeight: 15
     - _WaterNoiseScale: -10
     - _WaterSpeed: 2
     - _WaveScale: 2
