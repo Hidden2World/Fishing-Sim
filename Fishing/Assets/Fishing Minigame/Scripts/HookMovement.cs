@@ -10,7 +10,7 @@ public class HookMovement : MonoBehaviour
     public float waterGravity;
     public float aboveGravity;
     bool inWater;
-    public float maxWaterGraivity;
+    public float maxWaterGravity;
     
 
 
@@ -37,6 +37,7 @@ public class HookMovement : MonoBehaviour
         {
             rb.AddForce(0, -waterGravity * Time.deltaTime, 0);
         }
+        else { }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -45,7 +46,10 @@ public class HookMovement : MonoBehaviour
         {
             //Debug.Log("in water");
             inWater = true;
-            
+
+            rb.AddForce(0, waterGravity, 0);
+
+
         }
     }
 
