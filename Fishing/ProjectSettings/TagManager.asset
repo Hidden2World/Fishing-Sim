@@ -11,6 +11,7 @@ TagManager:
   - hotspot
   - dock
   - SkyBox
+  - ReelPoint
   layers:
   - Default
   - TransparentFX
