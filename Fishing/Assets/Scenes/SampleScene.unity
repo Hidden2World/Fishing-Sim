@@ -328,6 +328,16 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4278190080
       objectReference: {fileID: 0}
+    - target: {fileID: 3867812343692180409, guid: a82add04aeecaa64a8112a0e1e56de92,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2142107609}
+    - target: {fileID: 3867812343692180409, guid: a82add04aeecaa64a8112a0e1e56de92,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Back
+      objectReference: {fileID: 0}
     - target: {fileID: 3867812343708360460, guid: a82add04aeecaa64a8112a0e1e56de92,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -487,6 +497,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867812344705492728, guid: a82add04aeecaa64a8112a0e1e56de92,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2142107609}
+    - target: {fileID: 3867812344705492728, guid: a82add04aeecaa64a8112a0e1e56de92,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Next
       objectReference: {fileID: 0}
     - target: {fileID: 3867812345101437046, guid: a82add04aeecaa64a8112a0e1e56de92,
         type: 3}
@@ -4438,6 +4458,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139458015}
   m_CullTransparentMesh: 1
+--- !u!114 &2142107609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 458209143597952866, guid: 090ae29d1e677d142b6486b848983443,
+    type: 3}
+  m_PrefabInstance: {fileID: 2010107499}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215d9770cc87de24f94f2d9efce9d368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &543450651728256994
 Transform:
   m_ObjectHideFlags: 0
