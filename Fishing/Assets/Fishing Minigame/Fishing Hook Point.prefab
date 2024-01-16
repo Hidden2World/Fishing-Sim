@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3912698707314952243}
   m_Layer: 0
   m_Name: Fishing Hook Point
-  m_TagString: Untagged
+  m_TagString: ReelPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

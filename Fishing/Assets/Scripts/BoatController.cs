@@ -20,6 +20,12 @@ public class BoatController : MonoBehaviour
     public string fishingSceneName;
     public bool lvlTwo;
     public bool lvlThree;
+    public GameObject levelOneBoat;
+    public GameObject levelTwoBoat;
+    public GameObject levelThreeBoat;
+
+    public bool canShop;
+    public bool canFish;
 
     public GameObject shop;
     public GameObject inv;
@@ -40,15 +46,27 @@ public class BoatController : MonoBehaviour
 
     void Update()
     {
-        //When you reach level two the bool is activated which triggers this script to remove a layer from the collision layermask
-        if (lvlTwo)
+        if (canFish && Input.GetButtonDown("Submit"))
         {
-            collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL2"));
+            SceneManager.LoadScene(fishingSceneName);
         }
-        //When you reach level three the bool is activated which triggers this script to remove a layer from the collision layermask
-        if (lvlThree)
+        
+        if (canShop && Input.GetButtonDown("Submit"))
         {
-            collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL3"));
+            invOn = false;
+            shopOn = true;
+            shop.SetActive(true);
+            inv.SetActive(false);
+            money.SetActive(true);
+        }
+
+        if (Input.GetKeyDown("1"))
+        {
+            LevelTwo();
+        }
+        if (Input.GetKeyDown("2"))
+        {
+            LevelThree();
         }
         moveInputValue = Input.GetAxis("Vertical");
         turnInputValue = Input.GetAxis("Horizontal");
@@ -113,25 +131,46 @@ public class BoatController : MonoBehaviour
         rb.MoveRotation(rb.rotation * turnRotation);
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("hotspot"))
         {
-            if (Input.GetButtonDown("Submit")) 
-            {
-                SceneManager.LoadScene(fishingSceneName);
-            }
+            canFish = true;
         }
-        else if (other.gameObject.CompareTag("dock"))
+
+        if (other.gameObject.CompareTag("dock"))
         {
-            if (Input.GetButtonDown("Submit") && shopOn == false)
-            {
-                invOn = false;
-                shopOn = true;
-                shop.SetActive(true);
-                inv.SetActive(false);
-                money.SetActive(true);
-            }
+            canShop = true;
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("hotspot"))
+        {
+            canFish = false;
+        }
+
+        if (other.gameObject.CompareTag("dock"))
+        {
+            canShop = false;
+        }
+    }
+
+    public void LevelTwo()
+    {
+        levelOneBoat.SetActive(false);
+        levelTwoBoat.SetActive(true);
+        moveSpeed = 14;
+        collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL2"));
+    }
+
+    public void LevelThree()
+    {
+        moveSpeed = 17;
+        levelTwoBoat.SetActive(false);
+        levelOneBoat.SetActive(false);
+        levelThreeBoat.SetActive(true);
+        collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL3"));
     }
 }

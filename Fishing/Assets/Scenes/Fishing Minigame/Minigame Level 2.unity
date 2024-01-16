@@ -1456,6 +1456,8 @@ MonoBehaviour:
   xSpawn: {fileID: 173384337}
   minFish: 2
   maxFish: 7
+  weightMax: 0
+  weightMin: 0
 --- !u!1 &1817261005
 GameObject:
   m_ObjectHideFlags: 0
