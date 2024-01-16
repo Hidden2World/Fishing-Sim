@@ -35,6 +35,8 @@ public class FishingMovementCat : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) && isReelingUp)
         {
             isReelingUp = false;
+            rb.velocity = Vector3.zero;
+
         }
 
         // Handle sinking and reeling up
@@ -48,11 +50,18 @@ public class FishingMovementCat : MonoBehaviour
         }
     }
 
-    void SinkHook()
+    /*void SinkHook() //velocity + acceleration
     {
         // Move the hook downward
         float sinkAmount = sinkingSpeed * Time.deltaTime;
         rb.AddForce(Vector3.down * sinkAmount, ForceMode.VelocityChange);
+    }
+    */
+    void SinkHook()
+    {
+        // Move the hook downward
+        float sinkAmount = sinkingSpeed * Time.deltaTime;
+        transform.position += Vector3.down * sinkAmount;
     }
 
     void ReelUpHook()
@@ -63,4 +72,8 @@ public class FishingMovementCat : MonoBehaviour
         // Apply a force to the rigidbody to move towards the target
         rb.AddForce(direction * reelingSpeed, ForceMode.VelocityChange);
     }
-}
+    
+  
+
+
+ }

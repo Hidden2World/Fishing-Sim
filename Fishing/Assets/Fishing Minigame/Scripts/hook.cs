@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.ProBuilder.MeshOperations;
+using UnityEngine.XR;
 
 public class hook : MonoBehaviour
 {
@@ -33,31 +35,21 @@ public class hook : MonoBehaviour
     }
     private void Update()
     {
-        if (caught)
+        if (Input.GetKeyDown(KeyCode.R)&& caught)
         {
-            rb.isKinematic = true;
+            caught = false;
+            isHooked = false;
+            Destroy(hookedFish);
+            rb.isKinematic = false;
+            fishCaughtDisplay.SetActive(false);
+            Debug.Log("r");
 
         }
-        if (caught)
-        {
-            if (Input.GetKey(KeyCode.R))
-            {
-                Destroy(hookedFish);
-                rb.isKinematic = false;
-                fishCaughtDisplay.SetActive(false);
-                Debug.Log("r");
-                isHooked = false;
-
-                caught = false;
-            }
-        }
-
-
-
     }
+    
     private void OnTriggerEnter(Collider collision)
     {
-        
+
 
         if (collision.gameObject == skyBox)
         {
@@ -66,7 +58,9 @@ public class hook : MonoBehaviour
             {
                 Debug.Log("Fish Caught");
                 fishCaughtDisplay.SetActive(true);
+                rb.isKinematic = true;
                 caught = true;
+                Debug.Log("caught");
 
                 if (caughtFish != null)
                 {
@@ -77,7 +71,7 @@ public class hook : MonoBehaviour
 
             }
         }
-        caughtFish = collision.GetComponent<FishTracker>();
+        caughtFish = collision.gameObject.GetComponent<FishTracker>();
         if (caughtFish != null && !isHooked)
         {
             hookedFish = collision.gameObject;
@@ -90,35 +84,42 @@ public class hook : MonoBehaviour
 
         private void turnHookOff()
         {
-            if (hookedFish.gameObject.name == "ClownFish(Clone)")
+            if (hookedFish.name == "ClownFish(Clone)")
             {
-                 hookedFish.GetComponent<ClownFishMovement>().hook = true;
-                  isHooked = true;
+                hookedFish.GetComponent<ClownFishMovement>().hook = true;
+                isHooked = true;
+                hookedFish.GetComponent<BoxCollider>().enabled = false;
+            
             }
 
             if (hookedFish.gameObject.name == "SeaBass(Clone)")
             {
                 hookedFish.GetComponent<BassMovement>().hooked = true;
                 isHooked = true;
+                hookedFish.GetComponent<BoxCollider>().enabled = false;
 
-            }
+
+        }
 
 
-            if (hookedFish.gameObject.name == "Shark(Clone)")
+        if (hookedFish.gameObject.name == "Shark(Clone)")
             {
                 hookedFish.GetComponent<SharkMovement>().hooked = true;
                 isHooked = true;
+                hookedFish.GetComponent<BoxCollider>().enabled = false;
 
-            } 
 
-            if (hookedFish.gameObject.name == "SeaHorse(Clone)")
+        }
+
+        if (hookedFish.gameObject.name == "SeaHorse(Clone)")
 
             {
                 Debug.Log("sea horse touched");
 
                 hookedFish.GetComponent<SeaHorseMovement>().hooked = true;
                 isHooked = true;
-            }
+                hookedFish.GetComponent<BoxCollider>().enabled = false;
+        }
             if (hookedFish.gameObject.name == "Squid(Clone)")
 
             {
@@ -126,14 +127,16 @@ public class hook : MonoBehaviour
 
                 hookedFish.GetComponent<SquidMovement>().hooked = true;
                 isHooked = true;
-            }
+                hookedFish.GetComponent<BoxCollider>().enabled = false;
+        }
             if (hookedFish.gameObject.name == "BasicFish2(Clone)")
             {
                 Debug.Log("Basic Fish Touched");
 
                 hookedFish.GetComponent<BassMovement>().hooked = true;
                 isHooked = true;
-            }
+                hookedFish.GetComponent<BoxCollider>().enabled = false;
+        }
 
 
 

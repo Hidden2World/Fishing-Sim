@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class ClownFishMovement : MonoBehaviour
 {
     public float speed = 5;
-    bool forward;
-    bool backward;
+
     public bool hook;
     Transform hookPos;
     bool hooked;
@@ -20,21 +19,15 @@ public class ClownFishMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        forward = true;
-        backward = false;
         hook = false;
-       
-
-
-
-
+        hooked = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         //hookPos = GameObject.FindWithTag("hook").transform;
-        if (Input.GetKey(KeyCode.R) && hooked)
+        /*if (Input.GetKey(KeyCode.R) && hooked)
         {
             hook = false;
             hooked = false;
@@ -42,7 +35,7 @@ public class ClownFishMovement : MonoBehaviour
             Debug.Log("release");
 
         }
-
+        */
          //Increment the timer by the time since the last frame
 
 
@@ -78,21 +71,18 @@ public class ClownFishMovement : MonoBehaviour
 
             transform.position = hookPos.position;
             hooked = true;
-
-
         }
 
     }
 
-
-
-
-    private void OnTriggerEnter(Collider other)
+   
+    private void OnCollisionEnter(Collision other)
     {
 
         if (other.gameObject.tag == "wall")
         {
             speed = speed * -1;
+            Debug.Log("clownfishswitchmovement");
 
         }
 
