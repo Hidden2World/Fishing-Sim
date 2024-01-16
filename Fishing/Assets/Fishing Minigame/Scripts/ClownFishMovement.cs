@@ -11,7 +11,7 @@ public class ClownFishMovement : MonoBehaviour
     Transform hookPos;
     bool hooked;
     public int randomPercent;
-    protected int outOfPercent = 4; //what the chance is, if outOfPercent == 5, it is a 1 in 5 chance.
+    public int switchOutOfPercent = 4; //what the chance is, if outOfPercent == 5, it is a 1 in 5 chance.
     public float timer = 0f;
     public float interval = 1f; //set the interval in seconds
 
@@ -44,11 +44,12 @@ public class ClownFishMovement : MonoBehaviour
          if (timer >= interval)
          {
              // Execute  code 
-             randomPercent = Random.Range(0, outOfPercent);
+             randomPercent = Random.Range(0, switchOutOfPercent);
              Debug.Log(randomPercent);
+             speed = speed * -1;
 
-             // Reset the timer
-             timer = 0f;
+            // Reset the timer
+            timer = 0f;
 
          }
        
