@@ -43,6 +43,7 @@ public class hook : MonoBehaviour
             rb.isKinematic = false;
             fishCaughtDisplay.SetActive(false);
             Debug.Log("r");
+            hookedFish = null;
 
         }
     }

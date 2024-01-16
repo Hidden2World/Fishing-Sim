@@ -24,8 +24,8 @@ public class FishCaught : MonoBehaviour
             hookedFish = hook.GetComponent<hook>().hookedFish;
             string fishName = hookedFish.GetComponent<FishTracker>().type.ToString();
             float fishWeight = hookedFish.GetComponent<FishTracker>().weight;
-
-            text.text = ("Caught" + fishName + "!" + "Weight:" + fishWeight + "KGS");
+            if (fishName != null && fishWeight != null)
+            text.text = ("Caught " + fishName + "!" + "Weight: " + fishWeight + "KGS");
         }
     }
 }
