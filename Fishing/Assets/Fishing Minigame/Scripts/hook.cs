@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.ProBuilder.MeshOperations;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 
 public class hook : MonoBehaviour
@@ -35,6 +36,11 @@ public class hook : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKey(KeyCode.E))
+        {
+            SceneManager.LoadScene("SampleScene");
+            Debug.Log("Load Scene");
+        }
         if (Input.GetKeyDown(KeyCode.R)&& caught)
         {
             caught = false;
@@ -43,6 +49,7 @@ public class hook : MonoBehaviour
             rb.isKinematic = false;
             fishCaughtDisplay.SetActive(false);
             Debug.Log("r");
+            hookedFish = null;
 
         }
     }

@@ -23,6 +23,12 @@ public class BassMovement : MonoBehaviour
     public float moveSpeed = 2f;        // Speed of fish movement
     public float switchInterval = 3f;   // Interval to switch direction in seconds
 
+
+    public int lowAngleRight;
+    public int highAngleRight;
+    public int lowAngleLeft;
+    public int hihgAngleLeft;
+
     private void Start()
     {
         hookPos = FindObjectOfType<hook>().transform;
@@ -77,6 +83,7 @@ public class BassMovement : MonoBehaviour
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
     }
 
+    
     void generateRandomAngle()
     {
         if (goingRight)

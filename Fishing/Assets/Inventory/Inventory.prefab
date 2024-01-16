@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d264a1f0e99a7f419631af53b346543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: 0
+  money: 1
   FishBucket: []
