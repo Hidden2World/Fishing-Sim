@@ -14,9 +14,14 @@ public class FishingMovementCat : MonoBehaviour
 
     public GameObject ui;
 
+    private AudioSource audioSource;
+    public AudioClip castingRod;
+    public AudioClip pullingFish;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
         reelTarget = GameObject.FindWithTag("ReelPoint").transform; // Find reel point by tag, adjust as needed
     }
 
@@ -33,6 +38,8 @@ public class FishingMovementCat : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && !isReelingUp)
             {
                 isReelingUp = true;
+                StopCastingRodSound();
+                PlayPullingFishSound();
             }
 
             // Release space bar to resume sinking
@@ -40,44 +47,67 @@ public class FishingMovementCat : MonoBehaviour
             {
                 isReelingUp = false;
                 rb.velocity = Vector3.zero;
-
+                StopAllSounds();
             }
 
             // Handle sinking and reeling up
             if (!isReelingUp)
             {
                 SinkHook();
+                PlayCastingRodSound();
             }
             else
             {
                 ReelUpHook();
             }
         }
-
-        /*void SinkHook() //velocity + acceleration
-        {
-            // Move the hook downward
-            float sinkAmount = sinkingSpeed * Time.deltaTime;
-            rb.AddForce(Vector3.down * sinkAmount, ForceMode.VelocityChange);
-        }
-        */
-        void SinkHook()
-        {
-            // Move the hook downward
-            float sinkAmount = sinkingSpeed * Time.deltaTime;
-            transform.position += Vector3.down * sinkAmount;
-        }
-
-        void ReelUpHook()
-        {
-            // Calculate the direction from the current position to the reel target
-            Vector3 direction = (reelTarget.position - transform.position).normalized;
-
-            // Apply a force to the rigidbody to move towards the target
-            rb.AddForce(direction * reelingSpeed, ForceMode.VelocityChange);
-        }
-
-
-
     }
- }
+
+    void SinkHook()
+    {
+        // Move the hook downward
+        float sinkAmount = sinkingSpeed * Time.deltaTime;
+        transform.position += Vector3.down * sinkAmount;
+    }
+
+    void ReelUpHook()
+    {
+        // Calculate the direction from the current position to the reel target
+        Vector3 direction = (reelTarget.position - transform.position).normalized;
+        // Apply a force to the rigidbody to move towards the target
+        rb.AddForce(direction * reelingSpeed, ForceMode.VelocityChange);
+    }
+
+    private void PlayCastingRodSound()
+    {
+        if (!audioSource.isPlaying || audioSource.clip != castingRod)
+        {
+            audioSource.clip = castingRod;
+            audioSource.Play();
+        }
+    }
+
+    private void PlayPullingFishSound()
+    {
+        if (!audioSource.isPlaying || audioSource.clip != pullingFish)
+        {
+            audioSource.clip = pullingFish;
+            audioSource.Play();
+        }
+    }
+    private void StopCastingRodSound()
+    {
+        if (audioSource.isPlaying && audioSource.clip == castingRod)
+        {
+            audioSource.Stop();
+        }
+    }
+
+    private void StopAllSounds()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+    }
+}

@@ -25,6 +25,7 @@ public class FIshingHookMovement : MonoBehaviour
     public SpringJoint joint;
 
     string hookType;
+    
 
   
 
@@ -35,6 +36,8 @@ public class FIshingHookMovement : MonoBehaviour
     {
          SpringJoint joint = GetComponent<SpringJoint>();
          down = true;
+
+        //audioSource = GetComponent<AudioSource>();
          
     }
 
@@ -104,6 +107,7 @@ public class FIshingHookMovement : MonoBehaviour
         if (collision.gameObject == waterCollider)
         {
             inWater = true;
+            
         }
 
         if (collision.gameObject.name == "Sky Box")

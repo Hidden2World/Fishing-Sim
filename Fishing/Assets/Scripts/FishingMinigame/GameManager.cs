@@ -7,10 +7,13 @@ public class GameManager : MonoBehaviour
 {
     private bool inventoryMenu;
     public GameObject inventoryObject;
+    public AudioClip lightWaves;
+    private AudioSource audioSource;
 
     void Start()
     {
         inventoryMenu = false;        //inventory is closed on startup
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()

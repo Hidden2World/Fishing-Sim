@@ -11,6 +11,7 @@ public class HookMovement : MonoBehaviour
     public float aboveGravity;
     bool inWater;
     public float maxWaterGravity;
+   
     
 
 
