@@ -144,7 +144,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6190368598056123350}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -161,13 +161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d293130dc9cbb374eaac31ac867b2a4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.025
-  hook: 0
-  randomPercent: 0
-  outOfPercent: 4
-  timer: 0
-  interval: 1
-  outOfPercentShark: 4
+  hooked: 0
+  outOfValue: 0
+  moveSpeed: 1
+  switchInterval: 3
 --- !u!114 &7054088066397655537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +180,7 @@ MonoBehaviour:
   weight: 0
   price: 0
   FishDescription: 
-  type: 0
+  type: 2
   FishImage: {fileID: 0}
   fishPrefab: {fileID: 5238430521948972652, guid: 12bf39589ca6786459dd548b6ac6d67b,
     type: 3}

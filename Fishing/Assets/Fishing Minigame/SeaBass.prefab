@@ -96,7 +96,7 @@ MonoBehaviour:
   weight: 0
   price: 0
   FishDescription: 
-  type: 0
+  type: 1
   FishImage: {fileID: 0}
   fishPrefab: {fileID: -636143105320694092, guid: 642059a8af1a42145a545708990deb86,
     type: 3}

@@ -82,6 +82,7 @@ public class ClownFishMovement : MonoBehaviour
         if (other.gameObject.tag == "wall")
         {
             speed = speed * -1;
+            Debug.Log("clownfishswitchmovement");
 
         }
 
