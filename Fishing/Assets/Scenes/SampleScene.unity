@@ -238,6 +238,12 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &41284169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3656942839212288639, guid: 6f0ea2976b535d343833a8f0d3040891,
+    type: 3}
+  m_PrefabInstance: {fileID: 1527828864}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &63111030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,6 +1750,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 136273848}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &569149264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8561964426049858868, guid: 64a4c3dc9ba0c264ba9b2285d3d77cd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 633988094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &599636091 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3867812343856394402, guid: a82add04aeecaa64a8112a0e1e56de92,
@@ -2968,7 +2980,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 633988094}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 569149264}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1072c10604e6d764dbb63ff543f1d8bd, type: 3}
@@ -2980,12 +2992,26 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 633988094}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 569149264}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbda757226cbebe44b97575661f9adc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1447429970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569149264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c37249a472d0247ae28bb0c81ec400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inventory: {fileID: 41284169}
+  Money: {fileID: 0}
 --- !u!1 &1451278255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f60fd27f69b947c4c850f7f8d1d0fc78,
@@ -3818,6 +3844,7 @@ GameObject:
   - component: {fileID: 1606899891}
   - component: {fileID: 1606899890}
   - component: {fileID: 1606899893}
+  - component: {fileID: 1606899894}
   m_Layer: 5
   m_Name: Fish bucket button
   m_TagString: Untagged
@@ -3889,7 +3916,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1606899891}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1606899894}
+        m_TargetAssemblyTypeName: FishBucketButton, Assembly-CSharp
+        m_MethodName: Bucket
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1606899891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3941,6 +3980,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishBucketInventory: {fileID: 1856294885}
+--- !u!114 &1606899894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606899888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c37249a472d0247ae28bb0c81ec400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inventory: {fileID: 1206355600}
+  Money: {fileID: 1525728396}
 --- !u!1 &1621987251 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4946417062637247855, guid: 4695837eed8db554bbdfb9f781eabc42,
