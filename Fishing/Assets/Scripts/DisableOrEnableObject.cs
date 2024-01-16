@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
+using UnityEngine.UI;
 
 public class DisableOrEnableObject : MonoBehaviour
     //naomi
 
     
 {
-    public GameObject fishBucketInventory;
+    public GameObject questionMarkPanel = null;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,11 +24,33 @@ public class DisableOrEnableObject : MonoBehaviour
         
     }
 
-    public void whenFishBucketIsClicked()
+    bool isPaused;
+    public void WhenButtonIsClicked()
     {
-        if (fishBucketInventory.activeInHierarchy == true)
-            fishBucketInventory.SetActive(false);
+        if (questionMarkPanel.activeInHierarchy == true)
+        {
+            questionMarkPanel.SetActive(false);
+            isPaused = !isPaused;
+            Time.timeScale = isPaused ? 0 : 1;
+        }
+
+
         else
-            fishBucketInventory.SetActive(true);
+        {
+
+            questionMarkPanel.SetActive(true);
+            Resume();
+        }
+
+        
+
+
     }
+    public void Resume()
+    {
+        isPaused = !isPaused;
+        Time.timeScale = isPaused ? 0 : 1;
+
+    }
+
 }
