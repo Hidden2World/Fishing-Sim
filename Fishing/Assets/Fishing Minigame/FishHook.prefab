@@ -12,10 +12,12 @@ GameObject:
   - component: {fileID: 125140425776465375}
   - component: {fileID: 125140425776465360}
   - component: {fileID: 125140425776465362}
-  - component: {fileID: 125140425776465372}
   - component: {fileID: 125140425776465371}
   - component: {fileID: 125140425776465370}
   - component: {fileID: 125140425776465369}
+  - component: {fileID: 125140425908619337}
+  - component: {fileID: 125140425908619345}
+  - component: {fileID: 125140425908619351}
   m_Layer: 0
   m_Name: FishHook
   m_TagString: hook
@@ -99,35 +101,11 @@ Rigidbody:
   m_Mass: 7.5
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
---- !u!145 &125140425776465372
-SpringJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125140425776465363}
-  m_ConnectedBody: {fileID: 0}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: -0.53, y: 3.04, z: 0.9444809}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  serializedVersion: 2
-  m_Spring: 50
-  m_Damper: 1
-  m_MinDistance: 0
-  m_MaxDistance: 0
-  m_Tolerance: 0.025
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!114 &125140425776465371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +113,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125140425776465363}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00c444c27f98cfc49a011b60ba005665, type: 3}
   m_Name: 
@@ -147,7 +125,7 @@ MonoBehaviour:
   inWater: 0
   waterCollider: {fileID: 0}
   rb: {fileID: 125140425776465362}
-  joint: {fileID: 125140425776465372}
+  joint: {fileID: 0}
 --- !u!65 &125140425776465370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -156,7 +134,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125140425776465363}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -177,3 +155,51 @@ MonoBehaviour:
   fishCaughtDisplay: {fileID: 0}
   rb: {fileID: 125140425776465362}
   caught: 0
+  skyBox: {fileID: 0}
+  hookedFish: {fileID: 0}
+--- !u!114 &125140425908619337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125140425776465363}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d16aa61ff4e5041b28eeb61798bfeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  watercollider: {fileID: 0}
+  rb: {fileID: 125140425776465362}
+  waterGravity: 10
+  aboveGravity: 200
+  maxWaterGravity: 20
+--- !u!114 &125140425908619345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125140425776465363}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fae05fb2dd21c64b8fc92b866fe2afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterGravity: 30
+--- !u!114 &125140425908619351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125140425776465363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a74c68b686c1e47a2610985b58ef68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sinkingSpeed: 2
+  reelingSpeed: 0.05
+  horizontalSpeed: 2.5
+  maxReelHeight: 10
