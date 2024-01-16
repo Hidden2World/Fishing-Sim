@@ -63,4 +63,7 @@ public class FishingMovementCat : MonoBehaviour
         // Apply a force to the rigidbody to move towards the target
         rb.AddForce(direction * reelingSpeed, ForceMode.VelocityChange);
     }
+    
+        
+    
 }

@@ -7,8 +7,7 @@ public class FishMovement : MonoBehaviour
 {
     public float speed;
     public float moveSpeed;
-    bool forward;
-    bool backward;
+   
     public bool hook;
     Transform hookPos;
     bool hooked;
@@ -21,8 +20,7 @@ public class FishMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        forward = true;
-        backward = false;
+       
         moveSpeed = speed / 5;
         
        
