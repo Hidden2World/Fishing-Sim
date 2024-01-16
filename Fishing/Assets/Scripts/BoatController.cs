@@ -11,7 +11,8 @@ public class BoatController : MonoBehaviour
     //The rigidbody variable
     public Rigidbody rb;
 
-    public float moveSpeed = 12;
+    public float baseMoveSpeed = 12;
+    public float moveSpeed;
     public float turnSpeed;
     [SerializeField]
     private float moveInputValue;
@@ -46,17 +47,34 @@ public class BoatController : MonoBehaviour
 
     void Update()
     {
-        if (canFish && Input.GetButtonDown("Submit"))
+        if (Input.GetButtonDown("Submit") && shopOn)
+        {
+            invOn = false;
+            inv.SetActive(false);
+            shop.SetActive(false);
+            shopOn = false;
+            money.SetActive(true);
+        }
+
+        if (canFish && Input.GetButtonDown("Submit") && invOn == false && shopOn == false)
         {
             SceneManager.LoadScene(fishingSceneName);
         }
         
-        if (canShop && Input.GetButtonDown("Submit"))
+        if (canShop && Input.GetButtonDown("Submit") && invOn == false && shopOn == false)
         {
             invOn = false;
             shopOn = true;
             shop.SetActive(true);
             inv.SetActive(false);
+            money.SetActive(true);
+        }
+        else if (Input.GetButtonDown("Submit") && shopOn == false)
+        {
+            invOn = false;
+            inv.SetActive(false);
+            shop.SetActive(false);
+            shopOn = false;
             money.SetActive(true);
         }
 
@@ -77,7 +95,7 @@ public class BoatController : MonoBehaviour
         }
         if (moveInputValue >= 0)
         {
-                moveSpeed = 12;
+                moveSpeed = baseMoveSpeed;
         }
 
         if (Input.GetKeyDown("i") && invOn == false)
@@ -161,13 +179,13 @@ public class BoatController : MonoBehaviour
     {
         levelOneBoat.SetActive(false);
         levelTwoBoat.SetActive(true);
-        moveSpeed = 14;
+        baseMoveSpeed = 17;
         collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL2"));
     }
 
     public void LevelThree()
     {
-        moveSpeed = 17;
+        baseMoveSpeed = 20;
         levelTwoBoat.SetActive(false);
         levelOneBoat.SetActive(false);
         levelThreeBoat.SetActive(true);
