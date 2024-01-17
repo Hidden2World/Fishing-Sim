@@ -205,6 +205,44 @@ public class hook : MonoBehaviour
             hookedFish.GetComponent<ClownFishMovement>().hook = true;
             hookedFishStuff();
         }
+        if (hookedFish.gameObject.name == "SkeletonFish(Clone)")
+        {
+            Debug.Log("");
+
+            hookedFish.GetComponent<BassMovement>().hooked = true;
+            hookedFishStuff();
+        }
+        if (hookedFish.gameObject.name == "ChristmasFish(Clone)")
+        {
+            Debug.Log("");
+
+            hookedFish.GetComponent<BassMovement>().hooked = true;
+            hookedFishStuff();
+        }
+        if (hookedFish.gameObject.name == "Eel(Clone)")
+        {
+            Debug.Log("Basic Fish Touched");
+
+            hookedFish.GetComponent<BassMovement>().hooked = true;
+            hookedFishStuff();
+        }
+        if (hookedFish.gameObject.name == "AnglerFIsh(Clone)")
+        {
+            Debug.Log("Basic Fish Touched");
+
+            hookedFish.GetComponent<BassMovement>().hooked = true;
+            hookedFishStuff();
+        }
+        if (hookedFish.gameObject.name == "DumbFish(Clone)")
+
+        {
+            Debug.Log("sea horse touched");
+
+            hookedFish.GetComponent<SeaHorseMovement>().hooked = true;
+            hookedFishStuff();
+        }
+
+
 
 
     }
