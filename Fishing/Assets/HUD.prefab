@@ -344,7 +344,8 @@ MonoBehaviour:
     reel your line back up!
 
 
-    Press R to cast again!'
+    When caught press R to ready your cast then Spacebar
+    to cast again!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73c50cce7eaa9ed4c84c84d4a5eb2713, type: 2}
   m_sharedMaterial: {fileID: 8255884731960328382, guid: 73c50cce7eaa9ed4c84c84d4a5eb2713,
@@ -713,7 +714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
