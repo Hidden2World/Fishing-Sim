@@ -604,7 +604,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1708214286}
   - component: {fileID: 1708214285}
-  - component: {fileID: 1708214287}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -625,7 +624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryObject: {fileID: 1126586055}
-  lightWaves: {fileID: 8300000, guid: c173f4fa709b9ef4b8018896f5d81312, type: 3}
+  Waves: {fileID: 8300000, guid: c173f4fa709b9ef4b8018896f5d81312, type: 3}
 --- !u!4 &1708214286
 Transform:
   m_ObjectHideFlags: 0

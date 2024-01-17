@@ -9,11 +9,12 @@ public class Pages : MonoBehaviour
     public Transform[] page;
     public TMP_Text PageNumber;
     private int pageNumberInt ; //has to be an int!
-
+    public AudioSource pageTurnSound;
 
     private void Start()
     {
         pageNumberInt = 0;
+        pageTurnSound = GetComponent<AudioSource>();
        
     }
 
@@ -30,6 +31,7 @@ public class Pages : MonoBehaviour
             page[pageNumberInt].gameObject.SetActive(false);
             pageNumberInt++;
             PageNumber.text = $"Page: {pageNumberInt + 1}";
+            pageTurnSound.Play();
             page[pageNumberInt].gameObject.SetActive(true);
         }
     }
@@ -40,6 +42,7 @@ public class Pages : MonoBehaviour
             page[pageNumberInt].gameObject.SetActive(false);
             pageNumberInt--;
             PageNumber.text = $"Page: {pageNumberInt + 1}";
+            pageTurnSound.Play();
             page[pageNumberInt].gameObject.SetActive(true);
         }
    
