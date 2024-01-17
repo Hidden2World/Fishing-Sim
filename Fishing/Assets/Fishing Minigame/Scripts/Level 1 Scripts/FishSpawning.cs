@@ -30,10 +30,10 @@ public class FishSpawning : MonoBehaviour
         for (int i = 0; i < spawnAmmount; i++)
         {
             int randomLength = Random.Range(0, Fish.Length);
-            float randomWeight = Random.Range(weightMin, weightMax);
+            //float randomWeight = Random.Range(weightMin, weightMax);
             Vector3 randomSpawnPosition = new Vector3(Random.Range(topSpawn11.position.x, xSpawn.position.x), Random.Range(bottomSpawn11.position.y, topSpawn11.position.y), zValue);
             fishClone = Instantiate(Fish[randomLength], randomSpawnPosition, Quaternion.identity);
-            fishClone.GetComponent<FishTracker>().weight = randomWeight;
+            //fishClone.GetComponent<FishTracker>().weight = randomWeight;
         }
     }
 
