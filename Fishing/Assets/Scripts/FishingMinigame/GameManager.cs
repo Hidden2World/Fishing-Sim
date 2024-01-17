@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     private bool inventoryMenu;
     public GameObject inventoryObject;
-    public AudioClip lightWaves;
+    public AudioClip Waves;
     private AudioSource audioSource;
 
     void Start()
