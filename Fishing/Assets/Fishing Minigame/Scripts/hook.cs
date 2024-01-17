@@ -36,11 +36,12 @@ public class hook : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        /*if (Input.GetKey(KeyCode.E))
         {
             SceneManager.LoadScene("SampleScene");
             Debug.Log("Load Scene");
         }
+        */
         if (Input.GetKeyDown(KeyCode.R)&& caught)
         {
             caught = false;
@@ -194,6 +195,14 @@ public class hook : MonoBehaviour
             Debug.Log("SQUID TOUCHED");
 
             hookedFish.GetComponent<SquidMovement>().hooked = true;
+            hookedFishStuff();
+        }
+        if (hookedFish.gameObject.name == "Sardine(Clone)")
+
+        {
+            Debug.Log("SQUID TOUCHED");
+
+            hookedFish.GetComponent<ClownFishMovement>().hook = true;
             hookedFishStuff();
         }
 
