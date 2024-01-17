@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
+
 public class FishCaught : MonoBehaviour
 {
     public TMP_Text text;
@@ -22,10 +24,10 @@ public class FishCaught : MonoBehaviour
         {
             
             hookedFish = hook.GetComponent<hook>().hookedFish;
-            string fishName = hookedFish.GetComponent<FishTracker>().type.ToString();
+            string fishName = hookedFish.GetComponent<FishTracker>().type.ToString().FirstCharacterToUpper();
             float fishWeight = hookedFish.GetComponent<FishTracker>().weight;
             
-            text.text = ("Caught " + fishName + "!" + "Weight: " + fishWeight + "KGS");
+            text.text = ("Caught " + fishName + "!");
         }
     }
 }

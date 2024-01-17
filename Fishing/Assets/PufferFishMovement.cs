@@ -72,7 +72,7 @@ public class PufferFishMovement : MonoBehaviour
 
         if (puffTimer >= puffInerval)
         {
-            if (!puffedFish.activeSelf) //if pufferfish is in flaccid mode
+            if (!hooked && !puffedFish.activeSelf) //if pufferfish is in flaccid mode
             {
                 puffedFish.SetActive(true);
                 flaccidFish.SetActive(false);

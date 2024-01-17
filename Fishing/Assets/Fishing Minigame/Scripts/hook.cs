@@ -36,11 +36,12 @@ public class hook : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        /*if (Input.GetKey(KeyCode.E))
         {
             SceneManager.LoadScene("SampleScene");
             Debug.Log("Load Scene");
         }
+        */
         if (Input.GetKeyDown(KeyCode.R)&& caught)
         {
             caught = false;
@@ -89,67 +90,131 @@ public class hook : MonoBehaviour
         }
     }
 
-        private void turnHookOff()
+    private void turnHookOff()
+    {
+        if (hookedFish.name == "ClownFish(Clone)")
         {
-            if (hookedFish.name == "ClownFish(Clone)")
-            {
-                hookedFish.GetComponent<ClownFishMovement>().hook = true;
-                isHooked = true;
-                hookedFish.GetComponent<BoxCollider>().enabled = false;
-            
-            }
+            hookedFish.GetComponent<ClownFishMovement>().hook = true;
+            hookedFishStuff();
 
-            if (hookedFish.gameObject.name == "SeaBass(Clone)")
-            {
-                hookedFish.GetComponent<BassMovement>().hooked = true;
-                isHooked = true;
-                hookedFish.GetComponent<BoxCollider>().enabled = false;
+        }
+
+        if (hookedFish.gameObject.name == "SeaBass(Clone)")
+        {
+            hookedFish.GetComponent<BassMovement>().hooked = true;
+            hookedFishStuff();
 
 
         }
 
 
         if (hookedFish.gameObject.name == "Shark(Clone)")
-            {
-                hookedFish.GetComponent<SharkMovement>().hooked = true;
-                isHooked = true;
-                hookedFish.GetComponent<BoxCollider>().enabled = false;
+        {
+            hookedFish.GetComponent<SharkMovement>().hooked = true;
+            hookedFishStuff();
+
 
 
         }
 
         if (hookedFish.gameObject.name == "SeaHorse(Clone)")
 
-            {
-                Debug.Log("sea horse touched");
+        {
+            Debug.Log("sea horse touched");
 
-                hookedFish.GetComponent<SeaHorseMovement>().hooked = true;
-                isHooked = true;
-                hookedFish.GetComponent<BoxCollider>().enabled = false;
+            hookedFish.GetComponent<SeaHorseMovement>().hooked = true;
+            hookedFishStuff();
         }
+
+        if (hookedFish.gameObject.name == "Squid(Clone)")
+
+            {
+                Debug.Log("SQUID TOUCHED");
+
+                hookedFish.GetComponent<SquidMovement>().hooked = true;
+                hookedFishStuff();
+            }
+            if (hookedFish.gameObject.name == "BasicFish (Clone)")
+            {
+                Debug.Log("Basic Fish Touched");
+
+                hookedFish.GetComponent<BassMovement>().hooked = true;
+                hookedFishStuff();
+            }
             if (hookedFish.gameObject.name == "Squid(Clone)")
 
             {
                 Debug.Log("SQUID TOUCHED");
 
                 hookedFish.GetComponent<SquidMovement>().hooked = true;
-                isHooked = true;
-                hookedFish.GetComponent<BoxCollider>().enabled = false;
-        }
-            if (hookedFish.gameObject.name == "BasicFish2(Clone)")
+                hookedFishStuff();
+            }
+            if (hookedFish.gameObject.name == "JellyFish(Clone)")
+
+            {
+                Debug.Log("SQUID TOUCHED");
+
+                hookedFish.GetComponent<SquidMovement>().hooked = true;
+                hookedFishStuff();
+            }
+            if (hookedFish.name == "SmolFish(Clone)")
+            {
+                hookedFish.GetComponent<ClownFishMovement>().hook = true;
+                hookedFishStuff();
+            }
+            if (hookedFish.name == "BoringFish(Clone)")
+            {
+                hookedFish.GetComponent<BoringFIshMovement>().hooked = true;
+
+                hookedFishStuff();
+
+            }
+            if (hookedFish.name == "PinkFish(Clone)")
+            {
+                hookedFish.GetComponent<BoringFIshMovement>().hooked = true;
+
+                hookedFishStuff();
+            }
+            if (hookedFish.gameObject.name == "MorayEel(Clone)")
             {
                 Debug.Log("Basic Fish Touched");
 
-                hookedFish.GetComponent<BassMovement>().hooked = true;
-                isHooked = true;
-                hookedFish.GetComponent<BoxCollider>().enabled = false;
+            hookedFish.GetComponent<BassMovement>().hooked = true;
+            hookedFishStuff();
+        }
+        if (hookedFish.gameObject.name == "PufferFish(Clone)")
+        {
+            Debug.Log("PufferFishTocuhed");
+
+            hookedFish.GetComponentInParent<PufferFishMovement>().hooked = true;
+            hookedFishStuff();
+        }
+        if (hookedFish.gameObject.name == "Octopus(Clone)")
+
+        {
+            Debug.Log("SQUID TOUCHED");
+
+            hookedFish.GetComponent<SquidMovement>().hooked = true;
+            hookedFishStuff();
+        }
+        if (hookedFish.gameObject.name == "Sardine(Clone)")
+
+        {
+            Debug.Log("SQUID TOUCHED");
+
+            hookedFish.GetComponent<ClownFishMovement>().hook = true;
+            hookedFishStuff();
         }
 
 
+    }
+        void hookedFishStuff()
+        {
+            isHooked = true;
+            hookedFish.GetComponent<BoxCollider>().enabled = false;
+        }
 
     }
-       
-   
-    }
+    
 
     
