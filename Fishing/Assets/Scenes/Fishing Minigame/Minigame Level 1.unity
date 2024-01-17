@@ -428,7 +428,7 @@ PrefabInstance:
     - target: {fileID: 3249147729851053220, guid: 192a7af0aca50874d94cdcdf1ba91d44,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3249147729851053220, guid: 192a7af0aca50874d94cdcdf1ba91d44,
         type: 3}
@@ -524,6 +524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249147729972597190, guid: 192a7af0aca50874d94cdcdf1ba91d44,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 192a7af0aca50874d94cdcdf1ba91d44, type: 3}
