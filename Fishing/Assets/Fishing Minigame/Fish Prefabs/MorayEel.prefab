@@ -101,8 +101,8 @@ MonoBehaviour:
   price: 0
   FishDescription: 
   type: 0
-  FishImage: {fileID: 0}
-  fishPrefab: {fileID: -636143105320694092, guid: 642059a8af1a42145a545708990deb86,
+  FishImage: {fileID: 21300000, guid: d14bc93d9b4381845a3552c262d71301, type: 3}
+  fishPrefab: {fileID: 4185534714189473959, guid: 6bcdb2ae51f0e054ab10da2640c2ed25,
     type: 3}
 --- !u!1 &8955494880933118616
 GameObject:

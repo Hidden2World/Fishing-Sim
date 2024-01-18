@@ -183,5 +183,6 @@ MonoBehaviour:
   price: 0
   FishDescription: clownfish
   type: 1
-  FishImage: {fileID: 21300000, guid: 0c3cce173345f7648b6056d003ac3c19, type: 3}
-  fishPrefab: {fileID: 783284976, guid: 1fc9b99405583644cbffc3f9f7bc1553, type: 3}
+  FishImage: {fileID: 21300000, guid: 7daa8f57f65be0f42a9bd54e5d102094, type: 3}
+  fishPrefab: {fileID: 4480995976033652849, guid: 804c7b6d3963d02489ad492546ceb85e,
+    type: 3}

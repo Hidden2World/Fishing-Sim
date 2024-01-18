@@ -12,6 +12,7 @@ TagManager:
   - dock
   - SkyBox
   - ReelPoint
+  - PlaySFX
   layers:
   - Default
   - TransparentFX

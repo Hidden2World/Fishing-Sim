@@ -11,7 +11,7 @@ public class SeaHorseMovement : MonoBehaviour
 
     Transform hookPos;
 
-    public string topBoundry;
+    public GameObject topBoundry;
     public string leftBoundry;
     public string rightBoundry;
 
@@ -103,7 +103,7 @@ public class SeaHorseMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == topBoundry)
+        if (other.gameObject == topBoundry)
         {
             skyBoxHit = true;
             moveTimer = switchInterval;

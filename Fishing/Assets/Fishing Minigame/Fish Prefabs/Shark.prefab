@@ -181,6 +181,6 @@ MonoBehaviour:
   price: 0
   FishDescription: 
   type: 4
-  FishImage: {fileID: 0}
-  fishPrefab: {fileID: 5238430521948972652, guid: 12bf39589ca6786459dd548b6ac6d67b,
+  FishImage: {fileID: 21300000, guid: 2b76da2f8d98e28449655516c35f41b4, type: 3}
+  fishPrefab: {fileID: 7054088066397655537, guid: d72f5f6765682424681810d6c3efd779,
     type: 3}

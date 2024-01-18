@@ -159,8 +159,8 @@ MonoBehaviour:
   price: 0
   FishDescription: 
   type: 2
-  FishImage: {fileID: 0}
-  fishPrefab: {fileID: 512771445681925259, guid: e1495abd83a1bc647a3cdd63d6a615de,
+  FishImage: {fileID: 21300000, guid: 43474ddb4e01a6c489dce241728a015c, type: 3}
+  fishPrefab: {fileID: 4775410103200609838, guid: 9fd7ba6ada2e965439ee0dcecb25a1ca,
     type: 3}
 --- !u!65 &3994783508099994704
 BoxCollider:

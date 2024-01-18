@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 244044666145271119, guid: 676407638d262014c87a6ab9872839dc,
         type: 3}
       propertyPath: m_Name
-      value: SeaBass
+      value: BasicFish2
       objectReference: {fileID: 0}
     - target: {fileID: 3643988237684188884, guid: 676407638d262014c87a6ab9872839dc,
         type: 3}
@@ -67,5 +67,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6073409401476379404, guid: 676407638d262014c87a6ab9872839dc,
+        type: 3}
+      propertyPath: FishImage
+      value: 
+      objectReference: {fileID: 21300000, guid: ba967215d436450469d8e2d8d3d5d532,
+        type: 3}
+    - target: {fileID: 6073409401476379404, guid: 676407638d262014c87a6ab9872839dc,
+        type: 3}
+      propertyPath: fishPrefab
+      value: 
+      objectReference: {fileID: 1170240109981954280, guid: 463ee8c3d4a4a364ebc0db2fc6bb7f5e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 676407638d262014c87a6ab9872839dc, type: 3}

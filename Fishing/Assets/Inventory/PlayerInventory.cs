@@ -20,7 +20,7 @@ public class PlayerInventory : MonoBehaviour
 
     }
 
-    static private PlayerInventory playerinventory = null;
+    private static PlayerInventory playerinventory;
 
     private void Awake() // called when the object is created (before start)
     {
@@ -33,6 +33,7 @@ public class PlayerInventory : MonoBehaviour
         else
         {
             Destroy(this);
+
         }
 
     }

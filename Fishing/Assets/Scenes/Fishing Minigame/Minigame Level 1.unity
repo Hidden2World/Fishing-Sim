@@ -425,10 +425,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3249147729851053222, guid: 192a7af0aca50874d94cdcdf1ba91d44,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249147729851053222, guid: 192a7af0aca50874d94cdcdf1ba91d44,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249147729851053222, guid: 192a7af0aca50874d94cdcdf1ba91d44,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 3249147729851053224, guid: 192a7af0aca50874d94cdcdf1ba91d44,
         type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479413909479308365, guid: 192a7af0aca50874d94cdcdf1ba91d44,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 192a7af0aca50874d94cdcdf1ba91d44, type: 3}
@@ -1184,6 +1204,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1402237785156457051, guid: 3a792623643da504b886fa6ccbaf0822,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402237785156457051, guid: 3a792623643da504b886fa6ccbaf0822,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402237785156457051, guid: 3a792623643da504b886fa6ccbaf0822,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 2429038842784057431, guid: 3a792623643da504b886fa6ccbaf0822,
         type: 3}
       propertyPath: m_RootOrder
@@ -1629,6 +1664,21 @@ PrefabInstance:
       propertyPath: hook
       value: 
       objectReference: {fileID: 125140425908619336}
+    - target: {fileID: 6994489933326205428, guid: b01b30e6695fd9f46baafde22bceaa6d,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994489933326205428, guid: b01b30e6695fd9f46baafde22bceaa6d,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994489933326205428, guid: b01b30e6695fd9f46baafde22bceaa6d,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 6994489933326205430, guid: b01b30e6695fd9f46baafde22bceaa6d,
         type: 3}
       propertyPath: m_Name
