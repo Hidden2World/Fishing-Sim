@@ -24,6 +24,8 @@ public class hook : MonoBehaviour
 
     public GameObject skyBox;
     public GameObject hookedFish;
+    public bool fishExist;
+
     
 
     private void Start()
@@ -70,10 +72,12 @@ public class hook : MonoBehaviour
                 caught = true;
                 Debug.Log("caught");
 
-                if (caughtFish != null)
+                if (hookedFish != null && fishExist)
                 {
                     inventory = FindObjectOfType<PlayerInventory>();
-                    inventory.FishBucket.Add(caughtFish.fishPrefab);
+                    inventory.FishBucket.Add(hookedFish.GetComponent<FishTracker>().fishPrefab);
+                    Debug.Log("fish added");
+                    fishExist = false;
                 }
 
 
@@ -250,6 +254,7 @@ public class hook : MonoBehaviour
         {
             isHooked = true;
             hookedFish.GetComponent<BoxCollider>().enabled = false;
+            fishExist = true;
         }
 
     }
