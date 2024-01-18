@@ -58,6 +58,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5966906563516924666}
     m_Modifications:
+    - target: {fileID: 402068700407160436, guid: 40d33419c2730b347b0bec26df33129a,
+        type: 3}
+      propertyPath: type
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 5962343294263148599, guid: 40d33419c2730b347b0bec26df33129a,
         type: 3}
       propertyPath: m_Name
@@ -133,6 +138,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5966906563516924666}
     m_Modifications:
+    - target: {fileID: 409030586921849624, guid: 0b2d0b72a5721594e82bf8890ef19b99,
+        type: 3}
+      propertyPath: type
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 409030586921849624, guid: 0b2d0b72a5721594e82bf8890ef19b99,
+        type: 3}
+      propertyPath: FishDescription
+      value: christmasfish
+      objectReference: {fileID: 0}
     - target: {fileID: 5946787659779247451, guid: 0b2d0b72a5721594e82bf8890ef19b99,
         type: 3}
       propertyPath: m_Name
@@ -456,6 +471,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1948271126341498957, guid: 6cb31787d23779741bd8b35ef664d3d9,
+        type: 3}
+      propertyPath: type
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1948271126341498957, guid: 6cb31787d23779741bd8b35ef664d3d9,
+        type: 3}
+      propertyPath: FishDescription
+      value: sardine
+      objectReference: {fileID: 0}
     - target: {fileID: 3387520244766943937, guid: 6cb31787d23779741bd8b35ef664d3d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -566,6 +591,11 @@ PrefabInstance:
       propertyPath: weight
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4480995976033652849, guid: 387c50b09350d2f44b533452ba10f7a1,
+        type: 3}
+      propertyPath: FishDescription
+      value: smolfish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 387c50b09350d2f44b533452ba10f7a1, type: 3}
 --- !u!4 &7589212958673458210 stripped
@@ -595,6 +625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: weight
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185534714189473959, guid: b3cd3a044f2e049489e3ed17d5ad0398,
+        type: 3}
+      propertyPath: FishDescription
+      value: morayeel
       objectReference: {fileID: 0}
     - target: {fileID: 6687036168708439423, guid: b3cd3a044f2e049489e3ed17d5ad0398,
         type: 3}
@@ -730,6 +765,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206705910224309686, guid: 303b8b5842a83e945a05fba1d4ed0ffc,
+        type: 3}
+      propertyPath: type
+      value: 17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 303b8b5842a83e945a05fba1d4ed0ffc, type: 3}
@@ -1007,6 +1047,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoringFish
       objectReference: {fileID: 0}
+    - target: {fileID: 8126412939154236660, guid: f97f6f8e283989440bf72be54fc6eebf,
+        type: 3}
+      propertyPath: type
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f97f6f8e283989440bf72be54fc6eebf, type: 3}
 --- !u!4 &4743464213442561565 stripped
@@ -1099,6 +1144,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6073409401476379404, guid: 676407638d262014c87a6ab9872839dc,
+        type: 3}
+      propertyPath: type
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 676407638d262014c87a6ab9872839dc, type: 3}
 --- !u!4 &6943633742118068969 stripped
@@ -1178,6 +1228,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Squid
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445929763653609372, guid: 095dce2110d56f749ae524802e272166,
+        type: 3}
+      propertyPath: type
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8445929763653609372, guid: 095dce2110d56f749ae524802e272166,
         type: 3}
@@ -1453,6 +1508,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724940559846971406, guid: e13bc89939f206448b610e2e05258ccd,
+        type: 3}
+      propertyPath: type
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724940559846971406, guid: e13bc89939f206448b610e2e05258ccd,
+        type: 3}
+      propertyPath: FishDescription
+      value: eel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e13bc89939f206448b610e2e05258ccd, type: 3}
@@ -1799,6 +1864,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkeletonFish
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624066606983974683, guid: 6ab243416b49aa24db262040d828296e,
+        type: 3}
+      propertyPath: type
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ab243416b49aa24db262040d828296e, type: 3}
