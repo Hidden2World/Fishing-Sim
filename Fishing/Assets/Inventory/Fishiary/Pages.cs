@@ -26,7 +26,7 @@ public class Pages : MonoBehaviour
 
     public void Next()
     {
-        if (pageNumberInt < 19)
+        if (pageNumberInt < 10)
         {
             page[pageNumberInt].gameObject.SetActive(false);
             pageNumberInt++;
