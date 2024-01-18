@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 5946787659779247451, guid: 0b2d0b72a5721594e82bf8890ef19b99,
         type: 3}
       propertyPath: m_Name
-      value: Christmas Fish
+      value: ChristmasFish
       objectReference: {fileID: 0}
     - target: {fileID: 7166974629706548928, guid: 0b2d0b72a5721594e82bf8890ef19b99,
         type: 3}
