@@ -24,6 +24,7 @@ public class BoatController : MonoBehaviour
     public GameObject levelOneBoat;
     public GameObject levelTwoBoat;
     public GameObject levelThreeBoat;
+    public AudioSource boatMovementSound;
 
     public bool canShop;
     public bool canFish;
@@ -140,6 +141,22 @@ public class BoatController : MonoBehaviour
             Vector3 movement = transform.forward * moveInputValue * moveSpeed * Time.deltaTime;
             rb.MovePosition(rb.position + movement);
         }
+
+        if (moveInputValue != 0)
+        {
+
+            boatMovementSound.volume = Mathf.Abs(moveInputValue);
+            boatMovementSound.pitch = 1f + moveInputValue;
+
+            boatMovementSound.Play();
+        }
+        
+
+        else if (boatMovementSound.isPlaying)
+        {
+            boatMovementSound.Stop();
+        }
+
     }
 
     private void Turn()
