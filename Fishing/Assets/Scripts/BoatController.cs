@@ -18,7 +18,10 @@ public class BoatController : MonoBehaviour
     private float moveInputValue;
     private float turnInputValue;
     public LayerMask collisionLayer;
-    public string fishingSceneName;
+    public string fishingSceneName1;
+    public string fishingSceneName2;
+    public string fishingSceneName3;
+
     public bool lvlTwo;
     public bool lvlThree;
     public GameObject levelOneBoat;
@@ -27,7 +30,9 @@ public class BoatController : MonoBehaviour
     public AudioSource boatMovementSound;
 
     public bool canShop;
-    public bool canFish;
+    public bool canFish1;
+    public bool canfish2;
+        public bool canfish3;
 
     public GameObject shop;
     public GameObject inv;
@@ -63,11 +68,21 @@ public class BoatController : MonoBehaviour
             money.SetActive(true);
         }
 
-        else if (canFish && Input.GetButtonDown("Submit") && invOn == false && shopOn == false)
+        else if (canFish1 && Input.GetButtonDown("Submit") && invOn == false && shopOn == false && (levelOneBoat.activeSelf || levelTwoBoat.activeSelf || levelThreeBoat.activeSelf)
+
+)
         {
-            SceneManager.LoadScene(fishingSceneName);
+            SceneManager.LoadScene(fishingSceneName1);
         }
-        
+        else if (canfish2 && Input.GetButtonDown("Submit") && invOn == false && shopOn == false && (levelTwoBoat.activeSelf || levelThreeBoat.activeSelf))
+        {
+            SceneManager.LoadScene(fishingSceneName2);
+        }
+        else if (canfish3 && Input.GetButtonDown("Submit") && invOn == false && shopOn == false && (levelThreeBoat.activeSelf))
+        {
+            SceneManager.LoadScene(fishingSceneName3);
+        }
+
         else if (canShop && Input.GetButtonDown("Submit") && invOn == false && shopOn == false)
         {
             invOn = false;
@@ -174,9 +189,17 @@ public class BoatController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("hotspot"))
+        if (other.gameObject.CompareTag("hotspot1"))
         {
-            canFish = true;
+            canFish1 = true;
+        }
+        if (other.gameObject.CompareTag("hotspot2"))
+        {
+            canfish2 = true;
+        }
+        if (other.gameObject.CompareTag("hotspot3"))
+        {
+            canfish3 = true;
         }
 
         if (other.gameObject.CompareTag("dock"))
@@ -187,9 +210,17 @@ public class BoatController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("hotspot"))
+        if (other.gameObject.CompareTag("hotspot1"))
         {
-            canFish = false;
+            canFish1 = false;
+        }
+        if (other.gameObject.CompareTag("hotspot2"))
+        {
+            canfish2 = false;
+        }
+        if (other.gameObject.CompareTag("hotspot3"))
+        {
+            canfish3 = false;
         }
 
         if (other.gameObject.CompareTag("dock"))

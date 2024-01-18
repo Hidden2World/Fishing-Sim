@@ -13,6 +13,9 @@ TagManager:
   - SkyBox
   - ReelPoint
   - PlaySFX
+  - hotspot1
+  - hotspot2
+  - hotspot3
   layers:
   - Default
   - TransparentFX
