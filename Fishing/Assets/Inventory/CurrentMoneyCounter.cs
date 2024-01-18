@@ -22,6 +22,9 @@ public class CurrentMoneyCounter : MonoBehaviour
         {
             Inventory = FindObjectOfType<PlayerInventory>();
         }
-        CurrentMoneyText.text = "$" + Inventory.money;
+        if (CurrentMoneyText !=null)
+        {
+            CurrentMoneyText.text = "$" + Inventory.money; 
+        }
     }
 }

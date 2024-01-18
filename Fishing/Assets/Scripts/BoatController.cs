@@ -79,14 +79,14 @@ public class BoatController : MonoBehaviour
             money.SetActive(true);
         }
 
-        if (Input.GetKeyDown("1"))
-        {
-            LevelTwo();
-        }
-        if (Input.GetKeyDown("2"))
-        {
-            LevelThree();
-        }
+        //if (Input.GetKeyDown("1"))
+        //{
+        //    LevelTwo();
+        //}
+        //if (Input.GetKeyDown("2"))
+        //{
+        //    LevelThree();
+        //}
         moveInputValue = Input.GetAxis("Vertical");
         turnInputValue = Input.GetAxis("Horizontal");
         if (moveInputValue <= 0)
@@ -194,18 +194,26 @@ public class BoatController : MonoBehaviour
 
     public void LevelTwo()
     {
+        //if player inventory money >= 100 
+
         levelOneBoat.SetActive(false);
         levelTwoBoat.SetActive(true);
         baseMoveSpeed = 17;
         collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL2"));
+
+        //decrease money by 100
     }
 
     public void LevelThree()
     {
+        //if player inventory money >=500
+
         baseMoveSpeed = 20;
         levelTwoBoat.SetActive(false);
         levelOneBoat.SetActive(false);
         levelThreeBoat.SetActive(true);
         collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL3"));
+
+        //decrease money by 500
     }
 }
