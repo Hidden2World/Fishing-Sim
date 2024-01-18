@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // making a type for each fish
-public enum fishtype { seabass, clownfish, octopus, squid, shark, smolfish, skeletonfish, boringfish, christmasfish, seahorse, eel, pinkfish, basicfish, anglerfish, jellyfish, morayeel, pufferfish, dumbfish };
+public enum fishtype { seabass, clownfish, octopus, squid, shark, smolfish, skeletonfish, boringfish, christmasfish, seahorse, eel, pinkfish, basicfish, anglerfish, jellyfish, morayeel, pufferfish, dumbfish, sardine };
 
 /// <summary>
 /// this class is here to store all the information for the fish used

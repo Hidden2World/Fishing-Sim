@@ -274,7 +274,7 @@ PrefabInstance:
     - target: {fileID: 7195714218793801978, guid: 62e0f961ba8f9204fabadcabc6ee25a4,
         type: 3}
       propertyPath: topBoundry
-      value: topBoundry
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7195714218793801979, guid: 62e0f961ba8f9204fabadcabc6ee25a4,
         type: 3}
