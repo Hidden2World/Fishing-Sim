@@ -33,6 +33,7 @@ public class PlayerInventory : MonoBehaviour
         else
         {
             Destroy(this);
+
         }
 
     }

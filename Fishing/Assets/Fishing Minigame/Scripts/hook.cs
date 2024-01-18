@@ -73,7 +73,7 @@ public class hook : MonoBehaviour
                 if (caughtFish != null)
                 {
                     inventory = FindObjectOfType<PlayerInventory>();
-                    inventory.FishBucket.Add(caughtFish);
+                    inventory.FishBucket.Add(caughtFish.fishPrefab);
                 }
 
 

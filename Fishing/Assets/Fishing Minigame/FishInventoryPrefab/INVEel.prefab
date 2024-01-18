@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1961887972788875210}
   - component: {fileID: 5724940559846971406}
   m_Layer: 0
-  m_Name: Eel
+  m_Name: INVEel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,10 +99,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 25
   price: 15
-  FishDescription: 
+  FishDescription: Eel
   type: 15
   FishImage: {fileID: 21300000, guid: d14bc93d9b4381845a3552c262d71301, type: 3}
-  fishPrefab: {fileID: 5724940559846971406, guid: 49f897d509fdbe44c80ec7b62f5c0261,
+  fishPrefab: {fileID: -636143105320694092, guid: 642059a8af1a42145a545708990deb86,
     type: 3}
 --- !u!1 &8031535670657386761
 GameObject:

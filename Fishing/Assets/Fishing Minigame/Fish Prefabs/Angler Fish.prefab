@@ -102,7 +102,7 @@ MonoBehaviour:
   FishDescription: 
   type: 0
   FishImage: {fileID: 0}
-  fishPrefab: {fileID: -636143105320694092, guid: 642059a8af1a42145a545708990deb86,
+  fishPrefab: {fileID: 402068700407160436, guid: d4fc70ec565f9d74bb0cd4cf53a236d6,
     type: 3}
 --- !u!1 &7712045561644902951
 GameObject:

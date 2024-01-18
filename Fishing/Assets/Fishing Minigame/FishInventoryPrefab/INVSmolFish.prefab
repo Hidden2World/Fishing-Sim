@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4480995976033652844}
   - component: {fileID: 4480995976033652849}
   m_Layer: 0
-  m_Name: SmolFish
+  m_Name: INVSmolFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,10 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6705cd312363bf44394b04ac4a977e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0
-  price: 0
-  FishDescription: clownfish
+  weight: 5
+  price: 9
+  FishDescription: Smolfish
   type: 1
   FishImage: {fileID: 21300000, guid: 7daa8f57f65be0f42a9bd54e5d102094, type: 3}
-  fishPrefab: {fileID: 4480995976033652849, guid: 804c7b6d3963d02489ad492546ceb85e,
-    type: 3}
+  fishPrefab: {fileID: 783284976, guid: 1fc9b99405583644cbffc3f9f7bc1553, type: 3}
