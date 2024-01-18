@@ -35,6 +35,9 @@ public class BoatController : MonoBehaviour
     public bool invOn;
     public bool shopOn;
 
+    public GameObject upgradeButtonLv2;
+    public GameObject upgradeButtonLv3;
+
     private void Awake()
     {
         instance = this;
@@ -48,6 +51,9 @@ public class BoatController : MonoBehaviour
 
     void Update()
     {
+
+
+
         if (Input.GetButtonDown("Submit") && shopOn)
         {
             invOn = false;
@@ -57,12 +63,12 @@ public class BoatController : MonoBehaviour
             money.SetActive(true);
         }
 
-        if (canFish && Input.GetButtonDown("Submit") && invOn == false && shopOn == false)
+        else if (canFish && Input.GetButtonDown("Submit") && invOn == false && shopOn == false)
         {
             SceneManager.LoadScene(fishingSceneName);
         }
         
-        if (canShop && Input.GetButtonDown("Submit") && invOn == false && shopOn == false)
+        else if (canShop && Input.GetButtonDown("Submit") && invOn == false && shopOn == false)
         {
             invOn = false;
             shopOn = true;
@@ -196,10 +202,18 @@ public class BoatController : MonoBehaviour
     {
         //if player inventory money >= 100 
 
+        PlayerInventory playerInventoryScript = FindObjectOfType<PlayerInventory>();
+        if (playerInventoryScript.money >= 100)
+        {
         levelOneBoat.SetActive(false);
         levelTwoBoat.SetActive(true);
         baseMoveSpeed = 17;
         collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL2"));
+            playerInventoryScript.money -= 100;
+            upgradeButtonLv2.SetActive(false);
+
+        }
+
 
         //decrease money by 100
     }
@@ -208,11 +222,19 @@ public class BoatController : MonoBehaviour
     {
         //if player inventory money >=500
 
-        baseMoveSpeed = 20;
+        PlayerInventory playerInventoryScript = FindObjectOfType<PlayerInventory>();
+        if (playerInventoryScript.money >= 500)
+        {
+            baseMoveSpeed = 20;
         levelTwoBoat.SetActive(false);
         levelOneBoat.SetActive(false);
         levelThreeBoat.SetActive(true);
         collisionLayer &= ~(1 << LayerMask.NameToLayer("LVL3"));
+
+            playerInventoryScript.money -= 500;
+            upgradeButtonLv3.SetActive(false);
+        }
+
 
         //decrease money by 500
     }
