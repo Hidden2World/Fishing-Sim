@@ -1535,6 +1535,16 @@ PrefabInstance:
       propertyPath: FishDescription
       value: skeletonfish
       objectReference: {fileID: 0}
+    - target: {fileID: 522922190120345441, guid: 3c3c9da61cd977243a0d15be96dda36f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053351636151482606, guid: 3c3c9da61cd977243a0d15be96dda36f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1215701247130369117, guid: 3c3c9da61cd977243a0d15be96dda36f,
         type: 3}
       propertyPath: type
@@ -1615,6 +1625,16 @@ PrefabInstance:
       propertyPath: FishDescription
       value: pinkfish
       objectReference: {fileID: 0}
+    - target: {fileID: 3009280078476850719, guid: 3c3c9da61cd977243a0d15be96dda36f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035442040156291185, guid: 3c3c9da61cd977243a0d15be96dda36f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3411592001282418248, guid: 3c3c9da61cd977243a0d15be96dda36f,
         type: 3}
       propertyPath: type
@@ -1634,6 +1654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: FishDescription
       value: shark
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810699523970929661, guid: 3c3c9da61cd977243a0d15be96dda36f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5513574917358683335, guid: 3c3c9da61cd977243a0d15be96dda36f,
         type: 3}
@@ -1714,6 +1739,16 @@ PrefabInstance:
         type: 3}
       propertyPath: FishDescription
       value: sardine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375857531317944495, guid: 3c3c9da61cd977243a0d15be96dda36f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051883345843729379, guid: 3c3c9da61cd977243a0d15be96dda36f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8332707453560083286, guid: 3c3c9da61cd977243a0d15be96dda36f,
         type: 3}
